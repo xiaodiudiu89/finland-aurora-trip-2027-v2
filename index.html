@@ -81,6 +81,15 @@ button{font:inherit;color:inherit}
 .tab[aria-selected="true"]{color:#07110C;background:var(--aurora);font-weight:700}
 :root[data-theme="light"] .tab{color:rgba(234,241,247,.75)}
 .theme-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;width:34px;height:34px;cursor:pointer;color:#EAF1F7;flex:none;font-size:15px;line-height:1}
+/* mobile: tabs wrap to their own full-width second row */
+@media (max-width:760px){
+  .bar-in{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:10px;gap:8px 12px}
+  .brand{order:1;flex:1}
+  .theme-btn{order:2}
+  .tabs{order:3;flex-basis:100%;margin-left:0;justify-content:flex-start}
+  .tab{padding:7px 11px;font-size:13px}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 130px)}
+}
 .wrap{max-width:1180px;margin:0 auto;padding:28px clamp(16px,4vw,40px) 90px}
 .panel{display:none}.panel.on{display:block;animation:fade .35s ease}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
