@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2027 芬兰极光之旅 · 行程手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070E1A; --bg-2:#0B1626; --panel:rgba(16,30,50,.72); --panel-2:rgba(22,40,64,.8); --panel-solid:#122238;
+  --ink:#EAF1F7; --ink-2:#B5C3D3; --ink-3:#7D8DA2; --line:rgba(160,190,220,.14); --line-2:rgba(160,190,220,.26);
+  --aurora:#6FE3B1; --aurora-deep:#1FA97A; --aurora-soft:rgba(111,227,177,.14);
+  --violet:#B08CFF; --violet-soft:rgba(176,140,255,.16);
+  --amber:#F2B36B; --amber-soft:rgba(242,179,107,.16);
+  --rose:#FF8DA1; --rose-soft:rgba(255,141,161,.16);
+  --r-s:6px; --r-m:14px; --r-l:22px;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#1B2B44; --bg-2:#22365A; --panel:rgba(236,242,248,.92); --panel-2:rgba(222,231,241,.95); --panel-solid:#EEF3F8;
+  --ink:#14233A; --ink-2:#44546A; --ink-3:#7A889B; --line:rgba(20,35,58,.12); --line-2:rgba(20,35,58,.22);
+  --aurora:#15895F; --aurora-deep:#15895F; --aurora-soft:rgba(21,137,95,.12);
+  --violet:#5E3FC9; --violet-soft:rgba(94,63,201,.12);
+  --amber:#B36D12; --amber-soft:rgba(179,109,18,.14);
+  --rose:#C2415A; --rose-soft:rgba(194,65,90,.12);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:14.5px;line-height:1.75;-webkit-font-smoothing:antialiased;min-height:100%}
+/* night sky */
+.sky{position:fixed;inset:0;z-index:-1;overflow:hidden;background:
+  radial-gradient(ellipse 80% 55% at 50% -10%, #17354B 0%, transparent 60%),
+  linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 60%,#050B14 100%)}
+.sky .stars{position:absolute;inset:0;background-image:
+  radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.9) 50%, transparent 51%),
+  radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,.7) 50%, transparent 51%),
+  radial-gradient(1.5px 1.5px at 41% 9%, rgba(255,255,255,.8) 50%, transparent 51%),
+  radial-gradient(1px 1px at 57% 41%, rgba(255,255,255,.6) 50%, transparent 51%),
+  radial-gradient(1px 1px at 66% 77%, rgba(255,255,255,.75) 50%, transparent 51%),
+  radial-gradient(1.5px 1.5px at 79% 23%, rgba(255,255,255,.85) 50%, transparent 51%),
+  radial-gradient(1px 1px at 88% 58%, rgba(255,255,255,.6) 50%, transparent 51%),
+  radial-gradient(1px 1px at 5% 85%, rgba(255,255,255,.5) 50%, transparent 51%),
+  radial-gradient(1px 1px at 94% 90%, rgba(255,255,255,.7) 50%, transparent 51%),
+  radial-gradient(1px 1px at 35% 35%, rgba(255,255,255,.5) 50%, transparent 51%),
+  radial-gradient(1px 1px at 72% 50%, rgba(255,255,255,.55) 50%, transparent 51%),
+  radial-gradient(1.5px 1.5px at 18% 44%, rgba(255,255,255,.65) 50%, transparent 51%),
+  radial-gradient(1px 1px at 50% 88%, rgba(255,255,255,.5) 50%, transparent 51%),
+  radial-gradient(1px 1px at 62% 14%, rgba(255,255,255,.6) 50%, transparent 51%);
+  background-size:900px 700px;opacity:.75}
+.sky .glow{position:absolute;left:-10%;right:-10%;top:-12%;height:60vh;filter:blur(40px);opacity:.55;background:
+  radial-gradient(45% 60% at 22% 40%, rgba(111,227,177,.55), transparent 70%),
+  radial-gradient(40% 55% at 58% 25%, rgba(176,140,255,.45), transparent 70%),
+  radial-gradient(35% 50% at 86% 45%, rgba(111,227,177,.4), transparent 70%);
+  animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(-2%) skewX(-5deg)}to{transform:translateX(2%) skewX(5deg) scaleY(1.1)}}
+@media (prefers-reduced-motion:reduce){.sky .glow{animation:none}}
+:root[data-theme="light"] .sky .stars{opacity:.35}
+h1,h2,h3,h4{font-family:Fraunces,"Noto Serif SC","Songti SC",Georgia,serif;font-weight:500;line-height:1.2;margin:0;letter-spacing:-.01em}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--aurora)}
+:focus-visible{outline:2px solid var(--aurora);outline-offset:3px;border-radius:3px}
+strong{font-weight:700;color:var(--ink)}
+button{font:inherit;color:inherit}
+
+/* app bar */
+.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(7,14,26,.72);border-bottom:1px solid var(--line)}
+:root[data-theme="light"] .bar{background:rgba(27,43,68,.85)}
+.bar::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(7,14,26,.9);z-index:10}
+.bar-in{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px);display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:baseline;gap:10px;white-space:nowrap;color:#EAF1F7}
+.brand b{font-family:Fraunces,serif;font-weight:500;font-size:18px;letter-spacing:-.01em}
+.brand span{font-size:12px;color:rgba(234,241,247,.6)}
+.tabs{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{background:none;border:0;padding:8px 13px;border-radius:999px;font-size:13.5px;color:rgba(234,241,247,.7);cursor:pointer;white-space:nowrap;position:relative}
+.tab:hover{color:#fff;background:rgba(255,255,255,.06)}
+.tab[aria-selected="true"]{color:#07110C;background:var(--aurora);font-weight:700}
+:root[data-theme="light"] .tab{color:rgba(234,241,247,.75)}
+.theme-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;width:34px;height:34px;cursor:pointer;color:#EAF1F7;flex:none;font-size:15px;line-height:1}
+.wrap{max-width:1180px;margin:0 auto;padding:28px clamp(16px,4vw,40px) 90px}
+.panel{display:none}.panel.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none}}
+
+/* panel head */
+.ph{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:10px 0 22px}
+.ph h2{font-size:clamp(28px,3.6vw,40px);font-weight:400;color:#fff}
+:root[data-theme="light"] .ph h2{color:#fff}
+.ph .en{font-family:Fraunces,serif;font-style:italic;font-weight:300;color:rgba(234,241,247,.55);font-size:17px}
+.ph p{flex-basis:100%;margin:0;color:rgba(234,241,247,.7);max-width:66ch;font-size:14px}
+.lede{color:var(--ink-2);max-width:66ch;margin:0 0 20px;font-size:13.5px}
+
+/* glass card */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-l);backdrop-filter:blur(10px);box-shadow:0 20px 50px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.04)}
+.card-pad{padding:22px 24px}
+
+/* ===== overview ===== */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch;margin-top:4vh}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.hero-title{padding:34px 34px 30px;position:relative;overflow:hidden}
+.hero-title h1{font-size:clamp(40px,6vw,76px);font-weight:300;line-height:.98;letter-spacing:-.03em;color:#fff}
+.hero-title h1 .cn{display:block;font-family:"Noto Serif SC","Songti SC",serif;font-weight:400;font-size:.5em;letter-spacing:.16em;margin-top:.3em;color:var(--aurora)}
+.hero-title .dates{margin-top:26px;font-family:Fraunces,serif;font-size:clamp(17px,2vw,22px);color:#fff}
+.hero-title .sub{color:var(--ink-2);margin-top:6px;font-size:14px}
+.hero-title .lat{position:absolute;right:26px;top:22px;font-family:Fraunces,serif;font-style:italic;color:var(--ink-3);font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kpi{padding:22px 22px 18px;display:flex;flex-direction:column;justify-content:space-between;min-height:120px}
+.kpi b{font-family:Fraunces,serif;font-weight:300;font-size:50px;line-height:1;color:#fff}
+.kpi span{color:var(--ink-3);font-size:13px}
+.kpi.g b{color:var(--aurora)}.kpi.v b{color:var(--violet)}
+.lat-chart{margin-top:22px;padding:22px 22px 10px}
+.lat-chart svg{width:100%;height:auto;display:block}
+.lat-chart .chart-cap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;color:var(--ink-3);padding:8px 4px 6px}
+.stages{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:14px}
+@media (max-width:900px){.stages{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.stages{grid-template-columns:repeat(2,1fr)}}
+.stage{padding:14px 14px 12px;border-radius:var(--r-m);cursor:pointer;text-align:left;border:1px solid var(--line);background:var(--panel)}
+.stage:hover{border-color:var(--line-2)}
+.stage.core{border-color:rgba(111,227,177,.45);background:linear-gradient(180deg,var(--aurora-soft),var(--panel))}
+.stage .ico{font-size:20px;line-height:1}
+.stage b{display:block;margin-top:8px;font-weight:700;color:var(--ink)}
+.stage small{display:block;color:var(--ink-3);font-size:12px;line-height:1.5;margin-top:3px}
+.ov-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
+@media (max-width:900px){.ov-grid{grid-template-columns:1fr}}
+.ov-grid h3{font-size:18px;margin-bottom:12px;color:#fff;font-weight:500}
+.nights{list-style:none;margin:0;padding:0}
+.nights li{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--ink-2)}
+.nights li:last-child{border-bottom:0}
+.nights .d{font-family:Fraunces,serif;font-size:17px;color:var(--ink)}
+.nights .d small{display:block;font-family:inherit;font-size:11px;color:var(--ink-3)}
+.dead{list-style:none;margin:0;padding:0}
+.dead li{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--ink-2)}
+.dead li:last-child{border-bottom:0}
+.dead .when{font-family:Fraunces,serif;font-size:15px;color:var(--amber);white-space:nowrap;min-width:92px}
+.dead li b{color:var(--ink)}
+.jump{display:inline-flex;gap:6px;align-items:center;background:none;border:1px solid var(--line-2);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.jump:hover{border-color:var(--aurora);color:var(--ink)}
+
+/* ===== days ===== */
+.daynav{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:thin}
+.dchip{flex:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:9px 13px 8px;cursor:pointer;text-align:left;min-width:108px}
+.dchip:hover{border-color:var(--line-2)}
+.dchip[aria-selected="true"]{border-color:var(--aurora);background:linear-gradient(180deg,var(--aurora-soft),var(--panel));box-shadow:0 0 0 1px rgba(111,227,177,.35)}
+.dchip b{display:block;font-family:Fraunces,serif;font-weight:400;font-size:20px;line-height:1;color:var(--ink)}
+.dchip b small{font-family:inherit;font-size:11px;color:var(--ink-3);margin-left:4px}
+.dchip span{display:block;font-size:11.5px;color:var(--ink-2);margin-top:5px;line-height:1.3;white-space:nowrap}
+.dchip.grp{min-width:auto;padding:9px 10px;background:none;border:0;cursor:default;align-self:center;color:var(--ink-3);font-size:12px;writing-mode:horizontal-tb}
+.daytools{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 14px;flex-wrap:wrap}
+.daytools .where{color:var(--ink-3);font-size:13px}
+.pager{display:flex;gap:6px}
+.pager button{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:13px;color:var(--ink-2)}
+.pager button:hover{border-color:var(--aurora);color:var(--ink)}
+.pager button[aria-pressed="true"]{background:var(--aurora);color:#07110C;border-color:var(--aurora);font-weight:700}
+.part{margin-top:0}
+.part-title{display:none;align-items:baseline;gap:14px;flex-wrap:wrap;margin:30px 0 16px}
+.allmode .part-title{display:flex}
+.part-title h3{font-size:22px;color:#fff;font-weight:400}
+.part-title .range{font-family:Fraunces,serif;font-style:italic;color:var(--ink-3)}
+.part-title .tag{font-size:12px;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:2px 10px}
+.day{display:none;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-l);backdrop-filter:blur(10px);box-shadow:0 20px 50px rgba(0,0,0,.25);margin-bottom:22px;overflow:hidden}
+.day.on,.allmode .day{display:block}
+.day-head{display:grid;grid-template-columns:84px 1fr;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(111,227,177,.08),transparent 55%)}
+.day-num{font-family:Fraunces,serif;font-weight:300;font-size:58px;line-height:1;display:flex;align-items:center;justify-content:center;color:var(--aurora);border-right:1px solid var(--line)}
+.day-meta{padding:20px 24px 18px}
+.day-meta .dateline{font-size:13px;color:var(--ink-3);display:flex;gap:14px;flex-wrap:wrap}
+.day-meta h3{font-size:clamp(20px,2.6vw,27px);margin-top:4px;font-weight:400;color:#fff}
+:root[data-theme="light"] .day-meta h3,:root[data-theme="light"] .ph h2,:root[data-theme="light"] .part-title h3,:root[data-theme="light"] .ov-grid h3,:root[data-theme="light"] .kpi b,:root[data-theme="light"] .hero-title h1,:root[data-theme="light"] .hero-title .dates{color:var(--ink)}
+:root[data-theme="light"] .hero-title h1,:root[data-theme="light"] .ph h2,:root[data-theme="light"] .ph .en,:root[data-theme="light"] .ph p{color:#fff}
+.day-body{padding:6px 24px 20px}
+.block{margin-top:18px}
+.block-title{font-size:12.5px;color:var(--ink-3);padding:6px 0 4px;border-bottom:1px dashed var(--line);margin-bottom:4px;display:flex;gap:8px;align-items:center}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .t{font-family:Fraunces,serif;font-size:17px;color:var(--ink-2);padding-top:1px;font-variant-numeric:tabular-nums}
+.tl .t.soft{font-family:inherit;font-size:12.5px;color:var(--ink-3);padding-top:4px}
+.tl .what{font-weight:700;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;color:var(--ink)}
+.tl .what .cost{font-weight:500;color:var(--ink-2);font-family:Fraunces,serif;font-size:15px}
+.tl .note{color:var(--ink-2);font-size:13.5px;margin-top:4px;line-height:1.7}
+.tl .note p{margin:0 0 4px}
+.tl .warn{margin-top:6px;font-size:13px;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:6px 10px;border-radius:0 var(--r-s) var(--r-s) 0}
+.tl li.core{background:linear-gradient(90deg,var(--aurora-soft),transparent 60%);margin:0 -14px;padding-left:14px;padding-right:14px;border-radius:var(--r-s)}
+.tl li.core .t{color:var(--aurora)}
+@media (max-width:560px){.tl li{grid-template-columns:1fr;gap:2px}.tl li.core{margin:0;padding-left:10px;padding-right:10px}.day-head{grid-template-columns:60px 1fr}.day-num{font-size:40px}.day-body{padding:6px 16px 18px}.day-meta{padding:16px}}
+.costs{display:flex;flex-wrap:wrap;gap:8px;padding:14px 24px 18px;background:rgba(0,0,0,.18);border-top:1px solid var(--line)}
+.costs span{background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.costs span b{font-family:Fraunces,serif;font-size:14px;color:var(--ink);margin-left:6px;font-weight:500}
+.options{display:grid;gap:10px;margin-top:8px}
+.opt{border:1px solid var(--line);border-radius:var(--r-m);padding:10px 14px;font-size:13.5px;color:var(--ink-2);background:rgba(0,0,0,.14)}
+.opt b{color:var(--ink);display:block;margin-bottom:2px}
+.opt.a{border-left:4px solid var(--aurora)}.opt.b{border-left:4px solid var(--violet)}.opt.c{border-left:4px solid var(--amber)}
+.tree{list-style:none;margin:8px 0 0;padding:0;font-size:13.5px;color:var(--ink-2)}
+.tree li{padding:6px 0 6px 18px;position:relative}
+.tree li::before{content:"";position:absolute;left:0;top:14px;width:10px;height:1px;background:var(--ink-3)}
+.tree li b{color:var(--ink)}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:var(--r-s);padding:12px 16px;font-size:13.5px;color:var(--ink-2);margin:16px 0}
+
+/* badges */
+.b{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.02em;line-height:1;padding:4px 8px;border-radius:5px;white-space:nowrap;vertical-align:middle;border:1px solid transparent}
+.b::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.9}
+.b-booked{background:var(--aurora-soft);color:var(--aurora)}
+.b-paid{background:var(--aurora);color:#062A1C}.b-paid::before{background:#062A1C}
+.b-confirmed{background:transparent;color:var(--aurora);border-color:var(--aurora)}
+.b-waiting{background:var(--violet-soft);color:var(--violet)}
+.b-tobook{background:var(--amber-soft);color:var(--amber)}
+.b-toarrange{background:transparent;color:var(--amber);border-color:var(--amber)}
+.b-toconfirm{background:transparent;color:var(--amber);border-color:var(--amber);border-style:dashed}
+.b-optional{background:rgba(255,255,255,.08);color:var(--ink-2)}
+.b-flexible{background:transparent;color:var(--violet);border-color:var(--violet)}
+.b-weather{background:var(--violet-soft);color:var(--violet);border-style:dashed;border-color:var(--violet)}
+.b-pending{background:var(--rose-soft);color:var(--rose)}
+.b-core{background:var(--ink);color:var(--bg)}.b-core::before{background:var(--aurora-deep)}
+.b-shortlist{background:var(--violet-soft);color:var(--violet)}
+.b-none{background:transparent;color:var(--ink-3);border-color:var(--line-2)}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);backdrop-filter:blur(10px);margin:12px 0 28px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:13.5px}
+thead th{text-align:left;font-weight:700;font-size:12.5px;color:var(--ink-3);background:rgba(0,0,0,.2);padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.65}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:rgba(255,255,255,.025)}
+tbody td:first-child{color:var(--ink);font-weight:500}
+td .sub{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
+td .price{font-family:Fraunces,serif;font-size:15px;color:var(--ink);white-space:nowrap}
+td .badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:5px}
+.tbl-title{font-size:17px;font-weight:500;margin:26px 0 0;display:flex;gap:10px;align-items:center;color:#fff}
+:root[data-theme="light"] .tbl-title{color:#fff}
+.chk{list-style:none;margin:0;padding:0}
+.chk li{padding:3px 0 3px 24px;position:relative}
+.chk li::before{content:"";position:absolute;left:2px;top:9px;width:12px;height:12px;border:1.5px solid var(--ink-3);border-radius:3px}
+.chk li.done::before{background:var(--aurora);border-color:var(--aurora)}
+.chk li.done::after{content:"";position:absolute;left:6px;top:11px;width:4px;height:7px;border:solid #062A1C;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;font-size:13px;color:var(--ink-2)}
+.legend div{display:flex;align-items:center;gap:8px}
+
+/* budget */
+.budget{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.budget{grid-template-columns:1fr}}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-l);backdrop-filter:blur(10px);padding:20px 22px}
+.bcard h3{font-size:18px;display:flex;gap:10px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line);color:#fff;font-weight:500}
+:root[data-theme="light"] .bcard h3{color:var(--ink)}
+.bcard ul{list-style:none;margin:0;padding:0}
+.bcard li{display:grid;grid-template-columns:1fr auto;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:start}
+.bcard li:last-of-type{border-bottom:0}
+.bcard li .lab{color:var(--ink)}
+.bcard li .lab small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.bcard li .amt{font-family:Fraunces,serif;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.bcard .sub-total{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid var(--line-2);font-weight:700}
+.bcard .sub-total span:last-child{font-family:Fraunces,serif;font-weight:500;font-size:17px;color:var(--aurora)}
+.bcard.pending-card{border-style:dashed}
+.total{grid-column:1/-1;background:linear-gradient(120deg,rgba(111,227,177,.18),rgba(176,140,255,.14) 60%,transparent),var(--panel-solid);border:1px solid var(--line-2);border-radius:var(--r-l);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;position:relative;overflow:hidden}
+.total h3{font-size:14px;color:var(--ink-3);font-family:inherit;font-weight:500}
+.total .big{font-family:Fraunces,serif;font-weight:300;font-size:clamp(28px,4vw,46px);line-height:1.1;margin-top:6px;color:#fff}
+:root[data-theme="light"] .total .big{color:var(--ink)}
+.total p{font-size:12.5px;color:var(--ink-2);margin:10px 0 0;max-width:70ch}
+@media (max-width:760px){.total{grid-template-columns:1fr}}
+.bars{margin:0 0 16px;padding:20px 22px}
+.bars h3{font-size:16px;color:#fff;font-weight:500;margin-bottom:12px}
+:root[data-theme="light"] .bars h3{color:var(--ink)}
+.bar-row{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;font-size:13px;color:var(--ink-2);padding:5px 0}
+.bar-row .track{height:10px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+.bar-row .fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--aurora-deep),var(--aurora))}
+.bar-row .fill.v{background:linear-gradient(90deg,#7A5CE0,var(--violet))}
+.bar-row .fill.a{background:linear-gradient(90deg,#C78A3A,var(--amber))}
+.bar-row .amt{text-align:right;font-family:Fraunces,serif;font-size:14px;color:var(--ink)}
+@media (max-width:560px){.bar-row{grid-template-columns:110px 1fr 80px}}
+
+/* review */
+.review{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:26px}
+@media (max-width:760px){.review{grid-template-columns:1fr}}
+.review .bcard li{display:block;padding:8px 0 8px 22px;position:relative;border-bottom:1px dashed var(--line);color:var(--ink-2);font-size:13.5px}
+.review .bcard li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%;background:var(--aurora)}
+.review .todo li::before{background:var(--amber)}
+footer{text-align:center;color:var(--ink-3);font-size:13px;padding:10px 0 20px}
+footer .en{font-family:Fraunces,serif;font-style:italic}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><div class="stars"></div><div class="glow"></div></div>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand"><b>Finland Aurora 2027</b><span>1月2日 – 1月11日</span></div>
+    <nav class="tabs" role="tablist" aria-label="模块">
+      <button class="tab" role="tab" data-tab="overview" aria-selected="true">总览</button>
+      <button class="tab" role="tab" data-tab="days">每日行程</button>
+      <button class="tab" role="tab" data-tab="budget">预算</button>
+      <button class="tab" role="tab" data-tab="bookings">预订与待办</button>
+      <button class="tab" role="tab" data-tab="aurora">极光策略</button>
+      <button class="tab" role="tab" data-tab="refs">评价与参考</button>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换深浅色" title="切换深浅色">☾</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ===== 总览 ===== -->
+<section class="panel on" id="p-overview" role="tabpanel">
+  <div class="hero">
+    <div class="card hero-title">
+      <span class="lat">North 66.5° · Arctic Circle</span>
+      <h1>Finland Aurora<br>Adventure<span class="cn">芬兰极光之旅</span></h1>
+      <div class="dates">2027年1月2日 – 1月11日</div>
+      <div class="sub">拉普兰 · 玻璃穹顶 · 北极光 · 冰雪世界<br>从赤道到北极圈，追寻 Aurora Borealis 的九天旅程</div>
+    </div>
+    <div class="kpis">
+      <div class="card kpi"><b>9</b><span>天</span></div>
+      <div class="card kpi"><b>3</b><span>城市</span></div>
+      <div class="card kpi g"><b>5+</b><span>极光机会</span></div>
+      <div class="card kpi v"><b>7</b><span>核心活动</span></div>
+    </div>
+  </div>
+
+  <div class="card lat-chart">
+    <svg viewBox="0 0 960 360" role="img" aria-label="九天行程的纬度曲线：新加坡、赫尔辛基、罗瓦涅米、萨里山、赫尔辛基、新加坡">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6FE3B1" stop-opacity=".35"/><stop offset="1" stop-color="#6FE3B1" stop-opacity="0"/></linearGradient>
+      </defs>
+      <!-- y: lat 0 -> 320, lat 70 -> 40  (y = 320 - lat*4) ; x: Jan2 -> 80, Jan11 -> 900 (x = 80 + (day-2)*91.1) -->
+      <g font-family="Noto Sans SC, sans-serif" font-size="11" fill="var(--ink-3)">
+        <line x1="80" x2="900" y1="320" y2="320" stroke="var(--line)"/>
+        <line x1="80" x2="900" y1="80" y2="80" stroke="var(--line)"/>
+        <line x1="80" x2="900" y1="160" y2="160" stroke="var(--line)"/>
+        <line x1="80" x2="900" y1="240" y2="240" stroke="var(--line)"/>
+        <text x="72" y="324" text-anchor="end">0°</text>
+        <text x="72" y="244" text-anchor="end">20°N</text>
+        <text x="72" y="164" text-anchor="end">40°N</text>
+        <text x="72" y="84" text-anchor="end">60°N</text>
+        <!-- arctic circle 66.56 -> y = 53.8 -->
+        <line x1="80" x2="900" y1="53.8" y2="53.8" stroke="var(--aurora)" stroke-dasharray="5 6" stroke-width="1.2"/>
+        <text x="900" y="47" text-anchor="end" fill="var(--aurora)" font-size="11.5">Arctic Circle 66.56°N</text>
+        <!-- day ticks -->
+        <g text-anchor="middle">
+          <text x="80" y="344">1/2</text><text x="171.1" y="344">1/3</text><text x="262.2" y="344">1/4</text><text x="353.3" y="344">1/5</text><text x="444.4" y="344">1/6</text><text x="535.5" y="344">1/7</text><text x="626.6" y="344">1/8</text><text x="717.7" y="344">1/9</text><text x="808.8" y="344">1/10</text><text x="900" y="344">1/11</text>
+        </g>
+      </g>
+      <!-- path: SIN(1/2 22:05, lat1.35) -> HEL(1/3 05:45, 60.3) -> RVN(1/3 13:20, 66.5) hold -> 1/7 15:30 SRK 68.4 hold -> 1/9 18:35 IVL -> HEL 20:05 60.3 hold -> 1/11 00:05 -> SIN 1/11 18:40 -->
+      <path d="M163.5 314.6 L192.9 78.8 L221.7 54 L594.3 54 L594.3 46.4 L788.3 46.4 L794 78.8 L898 78.8 L944 314.6" fill="none" stroke="var(--line-2)" stroke-width="1"/>
+      <path d="M163.5 314.6 L192.9 78.8 L221.7 54 L594.3 54 L594.3 46.4 L788.3 46.4 L794 78.8 L898 78.8 L944 314.6 L944 320 L163.5 320 Z" fill="url(#g1)"/>
+      <path d="M163.5 314.6 L192.9 78.8 L221.7 54 L594.3 54 L594.3 46.4 L788.3 46.4 L794 78.8 L898 78.8 L944 314.6" fill="none" stroke="var(--aurora)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- segment labels -->
+      <g font-family="Fraunces, serif" font-size="13" fill="var(--ink)">
+        <text x="408" y="40" text-anchor="middle">罗瓦涅米 66.5°N · 4 晚</text>
+        <text x="691" y="33" text-anchor="middle">萨里山 68.4°N · 2 晚</text>
+        <text x="846" y="100" text-anchor="middle">赫尔辛基 60.2°N · 1 晚</text>
+        <text x="163.5" y="300" text-anchor="middle">新加坡 1.35°N</text>
+        <text x="944" y="300" text-anchor="middle">新加坡</text>
+      </g>
+      <g fill="var(--bg)" stroke="var(--aurora)" stroke-width="2.5">
+        <circle cx="163.5" cy="314.6" r="5"/><circle cx="192.9" cy="78.8" r="5"/><circle cx="221.7" cy="54" r="5"/><circle cx="594.3" cy="46.4" r="5"/><circle cx="794" cy="78.8" r="5"/><circle cx="944" cy="314.6" r="5"/>
+      </g>
+      <g font-family="Noto Sans SC, sans-serif" font-size="10.5" fill="var(--ink-2)">
+        <text x="200" y="100">HEL 05:45 中转</text>
+        <text x="760" y="106" text-anchor="end">IVL → HEL 18:35</text>
+        <text x="770" y="22" text-anchor="middle" fill="var(--violet)">玻璃屋 · 极光机动夜</text>
+        <text x="305" y="22" text-anchor="middle" fill="var(--violet)">极光 1/3 · 1/5 · 破冰船 · 冰瀑</text>
+      </g>
+    </svg>
+    <div class="chart-cap"><span>横轴：日期（当地时间）· 纵轴：纬度 · 虚线为北极圈</span><span>5 个极光观测夜：1/3 移动追猎 · 1/5 营地 · 1/7 玻璃屋 · 1/8 机动保险夜 · 1/8 玻璃屋</span></div>
+  </div>
+
+  <div class="stages">
+    <button class="stage" data-go="days" data-day="1"><div class="ico">🏠</div><b>新加坡</b><small>出发</small></button>
+    <button class="stage" data-go="days" data-day="1"><div class="ico">✈</div><b>赫尔辛基</b><small>中转</small></button>
+    <button class="stage core" data-go="days" data-day="1"><div class="ico">🎄</div><b>罗瓦涅米</b><small>Day 1 – 4 · Airbnb 4晚<br>活动核心</small></button>
+    <button class="stage core" data-go="days" data-day="5"><div class="ico">❄</div><b>NLV · 萨里山</b><small>Day 5 – 7<br>玻璃屋 2 晚</small></button>
+    <button class="stage" data-go="days" data-day="8"><div class="ico">🏙</div><b>赫尔辛基</b><small>Day 7晚 – 8<br>恢复日</small></button>
+    <button class="stage" data-go="days" data-day="9"><div class="ico">✈</div><b>回家</b><small>Day 9</small></button>
+  </div>
+
+  <div class="ov-grid">
+    <div class="card card-pad">
+      <h3>九天一览</h3>
+      <ul class="nights">
+        <li><span class="d">1/2<small>周六</small></span><span>22:05 新加坡 → 赫尔辛基，Finnair AY132 夜航</span><span class="b b-booked">BOOKED</span></li>
+        <li><span class="d">1/3<small>周日</small></span><span>抵达罗瓦涅米 · 19:00–02:00 Wild About Lapland 极光追猎</span><span class="b b-booked">BOOKED</span></li>
+        <li><span class="d">1/4<small>周一</small></span><span>Sampo 破冰船下午巡航（含 Rovaniemi 往返接送）</span><span class="b b-paid">PAID</span></li>
+        <li><span class="d">1/5<small>周二</small></span><span>恢复日 · 20:30 Apukka Snowtrain 极光营地</span><span class="b b-booked">BOOKED</span></li>
+        <li><span class="d">1/6<small>周三</small></span><span>08:00 Korouoma 冰瀑徒步 · 18:30 Ravintola Nili</span><span class="b b-booked">BOOKED</span></li>
+        <li><span class="d">1/7<small>周四</small></span><span>大巴转场萨里山 · 入住 NLV 玻璃屋 · 机动夜</span><span class="b b-flexible">FLEXIBLE</span></li>
+        <li><span class="d">1/8<small>周五</small></span><span>雪地摩托 &amp; 冰钓 · 极光保险夜</span><span class="b b-tobook">TO BOOK</span></li>
+        <li><span class="d">1/9<small>周六</small></span><span>哈士奇雪橇 10km · 18:35 飞赫尔辛基</span><span class="b b-paid">PAID</span></li>
+        <li><span class="d">1/10<small>周日</small></span><span>赫尔辛基恢复日 · 桑拿 / Old Market Hall</span><span class="b b-optional">OPTIONAL</span></li>
+        <li><span class="d">1/11<small>周一</small></span><span>00:05 AY131 回新加坡 · 18:40 抵达</span><span class="b b-booked">BOOKED</span></li>
+      </ul>
+    </div>
+    <div class="card card-pad">
+      <h3>关键时间节点</h3>
+      <ul class="dead">
+        <li><span class="when">抵达前 60 天</span><span><b>NLV 余款自动扣款</b> €1,030.40 · 已付定金不可退</span></li>
+        <li><span class="when">12月初</span><span><b>Taiga 预约系统开放</b> · 1/5 17:00 · 开放后尽快预订</span></li>
+        <li><span class="when">12/20 前</span><span><b>Airbnb 全额退款截止</b> · Rovaniemi Valtakatu 40</span></li>
+        <li><span class="when">12/20 前</span><span><b>Sampo 免费取消</b> · 官方为开始前 14 天（GMT+2），建议提前处理</span></li>
+        <li><span class="when">待办</span><span><b>1/8 S3 雪地摩托冰钓</b> TO BOOK · <b>1/7 Holiday Club → NLV</b> TO CONFIRM · <b>1/9 NLV → Ivalo</b> TO ARRANGE</span></li>
+      </ul>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button class="jump" data-go="bookings">查看预订与待办</button><button class="jump" data-go="aurora">查看极光策略</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section class="panel" id="p-days" role="tabpanel">
+  <div class="ph"><h2>每日行程</h2><span class="en">Day by day</span></div>
+  <div class="daynav" role="tablist" aria-label="选择日期">
+    <span class="dchip grp">罗瓦涅米</span>
+    <button class="dchip" data-day="1" aria-selected="true"><b>1<small>1/3 周日</small></b><span>抵达 + 极光追猎</span></button>
+    <button class="dchip" data-day="2"><b>2<small>1/4 周一</small></b><span>Sampo 破冰船</span></button>
+    <button class="dchip" data-day="3"><b>3<small>1/5 周二</small></b><span>轻松日 + Snowtrain</span></button>
+    <button class="dchip" data-day="4"><b>4<small>1/6 周三</small></b><span>Korouoma 冰瀑</span></button>
+    <span class="dchip grp">萨里山</span>
+    <button class="dchip" data-day="5"><b>5<small>1/7 周四</small></b><span>转场 → 玻璃屋</span></button>
+    <button class="dchip" data-day="6"><b>6<small>1/8 周五</small></b><span>雪地摩托 &amp; 冰钓</span></button>
+    <button class="dchip" data-day="7"><b>7<small>1/9 周六</small></b><span>哈士奇 + 飞 HEL</span></button>
+    <span class="dchip grp">赫尔辛基</span>
+    <button class="dchip" data-day="8"><b>8<small>1/10 周日</small></b><span>恢复日</span></button>
+    <button class="dchip" data-day="9"><b>9<small>1/11 周一</small></b><span>回家</span></button>
+  </div>
+  <div class="daytools">
+    <span class="where" id="dayWhere"></span>
+    <div class="pager"><button id="prevDay">‹ 前一天</button><button id="nextDay">后一天 ›</button><button id="allDays" aria-pressed="false">展开全部</button></div>
+  </div>
+  <div id="dayList">
+  <!-- PART 1 -->
+  <div class="part" style="margin-top:0">
+    <div class="part-title"><h3>罗瓦涅米 — 拉普兰的心脏</h3><span class="range">Day 1 – 4 · Rovaniemi</span><span class="tag">Airbnb · Valtakatu 40</span></div>
+
+    <article class="day" id="d1">
+      <div class="day-head"><div class="day-num">1</div>
+        <div class="day-meta"><div class="dateline"><span>1月3日 周日</span><span>📍 罗瓦涅米</span></div><h3>抵达 + 极光追猎</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">1月2日 周六 — 出发</div>
+          <ul class="tl">
+            <li><span class="t">22:05</span><div><div class="what">Singapore → Helsinki <span class="b b-booked">BOOKED</span></div><div class="note">Finnair AY132 · 1月3日 05:45 抵达 HEL</div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">白天</div>
+          <ul class="tl">
+            <li><span class="t">05:45</span><div><div class="what">抵达赫尔辛基 HEL</div></div></li>
+            <li><span class="t">11:55</span><div><div class="what">HEL → RVN 内陆航班 <span class="b b-booked">BOOKED</span><span class="cost">CNY 2,230 / 2人</span></div></div></li>
+            <li><span class="t soft">下午</span><div><div class="what">抵达罗瓦涅米 · 入住 Airbnb · 休息 + 吃饭</div><div class="note">Airbnb 地址：Valtakatu 40, 96200 Rovaniemi</div></div></li>
+            <li><span class="t">17:00</span><div><div class="what">晚餐（可选）：Arctic Restaurant <span class="b b-optional">OPTIONAL</span><span class="b b-none">未预约</span></div><div class="note">现代北欧料理 · 北极鱼类 · 驯鹿 · 市中心 · 如预约 17:00 需确保 18:30 前结束用餐（18:40 要出发去 WAL office）· 决定前先核对追光集合时间</div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">夜晚 — 集合与返程方式已确认</div>
+          <ul class="tl">
+            <li><span class="t">18:40</span><div><div class="what">从 Airbnb 出发，前往 Wild About Lapland Office</div><div class="note">Meeting Point：Wild About Lapland Office · 自行前往 · 19:00 前抵达 <span class="b b-confirmed">CONFIRMED</span></div></div></li>
+            <li class="core"><span class="t">19:00</span><div><div class="what">Guaranteed Northern Lights Hunting Adventure <span class="b b-core">核心</span><span class="b b-booked">BOOKED</span></div><div class="note">Wild About Lapland · 19:00–02:00（约 7h）· 2 adults · €340 / 2人 · 含专业导游摄影</div></div></li>
+            <li><span class="t">02:00</span><div><div class="what">返程 · 可直接送回住宿 <span class="b b-confirmed">CONFIRMED</span></div><div class="warn">⚠️ 返程提醒：活动当天告诉导游/司机，需要送回 Airbnb（Valtakatu 40）。</div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>HEL→RVN 机票<b>CNY 2,230 / 2人</b></span><span>极光追猎<b>€340 / 2人</b></span></div>
+    </article>
+
+    <article class="day" id="d2">
+      <div class="day-head"><div class="day-num">2</div>
+        <div class="day-meta"><div class="dateline"><span>1月4日 周一</span><span>📍 罗瓦涅米</span></div><h3>Sampo Icebreaker Afternoon Cruise</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">预订信息 — 官方直订 <span class="b b-paid">已付清</span></div>
+          <ul class="tl">
+            <li class="core"><span class="t soft">预订</span><div><div class="what">Icebreaker Sampo Afternoon Cruise with transfer from Rovaniemi <span class="b b-core">核心</span><span class="b b-paid">BOOKED / PAID</span><span class="b b-confirmed">PICKUP &amp; DROP-OFF CONFIRMED</span></div>
+              <div class="note"><p>The Icebreaking Company（Icebreaker Sampo 官网直订）· 2 adults · Cruise package €1,052 + Photography Service €60 = <strong>€1,112 / 2人</strong> · PAID IN FULL · Balance €0</p>
+              <p>包含：Rovaniemi 往返 shuttle bus · 4 小时破冰船巡航 · 无酒精热饮迎宾 · Guided ship tour · Ice floating（最低身高 140cm）· Walking on the frozen sea（weather permitting）· 船上午餐 · 参与证书 · SnowExperience 门票 · Gemstone exhibition 门票 · SnowCastle 区展览/体验</p>
+              <p>摄影服务（€30/人 ×2）：巡航全程不限量拍摄 · 含 ice floating 环节拍摄 · 数字交付 · 两人均已提前订好 <span class="b b-booked">BOOKED</span></p></div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">当天时间线</div>
+          <ul class="tl">
+            <li><span class="t">09:45</span><div><div class="what">09:45–09:50 抵达 Scandic Pohjanhovi 正门外 <span class="b b-confirmed">PICKUP CONFIRMED</span></div><div class="note"><p>Scandic Pohjanhovi Hotel · Pohjanpuistikko 2, Rovaniemi — 供应商已正式通知 shuttle supplier</p><p>认车提示：在酒店正门外等候 · 巴士会尽量停靠在正门附近 · 大概率为大型黑色巴士 · 认准车身 Icebreaker 图案与标识 · 务必准时</p></div></div></li>
+            <li><span class="t">10:00</span><div><div class="what">Icebreaker shuttle 发车 <span class="b b-confirmed">CONFIRMED</span></div></div></li>
+            <li><span class="t">11:30</span><div><div class="what">抵达 Kemi SnowCastle 区</div><div class="note">11:30–12:45 · Cruise check-in + SnowCastle 展览</div></div></li>
+            <li><span class="t">13:00</span><div><div class="what">SnowCastle 区出发 → 港口 · 13:15 抵达 Sampo 码头</div></div></li>
+            <li class="core"><span class="t">13:30</span><div><div class="what">Icebreaker Sampo Cruise · 13:30–17:30（4h）</div><div class="note">Lunch · Ship tour · Ice floating · Frozen sea activities</div></div></li>
+            <li><span class="t">17:40</span><div><div class="what">离港 · 17:50 SnowCastle 区短停 5 分钟</div></div></li>
+            <li><span class="t">19:40</span><div><div class="what">约 19:40 回到 Scandic Pohjanhovi Hotel <span class="b b-confirmed">DROP-OFF CONFIRMED</span></div><div class="note"><p>Drop-off 地点已确认：Scandic Pohjanhovi Hotel · 返程时间为估算，视路况而定 · 当晚不安排其他活动，休息</p><p>🍴 餐饮：船上已含午餐，当晚不预约正式晚餐，回来后灵活简餐</p></div></div></li>
+          </ul></div>
+        <div class="callout">🚌 取消政策（官方）：Free cancellation when made no later than 14 days before the start of the reservation (GMT+2)，截止前取消全额退款，可通过官方 My Page 或联系运营方办理 · 建议最晚 2026/12/20 前处理取消，避免卡 14 天截止时间</div>
+      </div>
+      <div class="costs"><span>Cruise + 接送<b>€1,052 / 2人</b></span><span>摄影服务<b>€60 / 2人</b></span><span>合计<b>€1,112 / 2人 · 已付清</b></span></div>
+    </article>
+
+    <article class="day" id="d3">
+      <div class="day-head"><div class="day-num">3</div>
+        <div class="day-meta"><div class="dateline"><span>1月5日 周二</span><span>📍 罗瓦涅米</span></div><h3>轻松日 + Apukka Snowtrain</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">白天 — Recovery / Easy Day</div>
+          <ul class="tl">
+            <li><span class="t">10:00</span><div><div class="what">自然醒 · 恢复日</div></div></li>
+            <li><span class="t soft">白天</span><div><div class="what">圣诞老人村等轻松活动</div><div class="note">北极圈地标 · 免费进入 · 不安排高强度项目</div></div></li>
+            <li><span class="t">17:00</span><div><div class="what">晚餐（计划）：Lappish Restaurant Taiga <span class="b b-pending">PENDING RESERVATION — 2026年12月跟进</span></div><div class="note"><p>现代拉普兰料理 · 驯鹿 · 北极鱼类 · 森林浆果 · 目标 17:00 · 2人 · <a href="https://www.restauranttaiga.fi/">restauranttaiga.fi</a></p><p>尚未开放预约：2026年12月初检查预约系统，开放后尽快预订 · 需 18:30 前结束用餐（19:30 要到 Korkalonkatu 23 集合）· 预约时确认能否 90 分钟内完成用餐</p><p>替代方案：Gustav Kitchen &amp; Bar（Taiga 无法预约时）</p></div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">夜晚</div>
+          <ul class="tl">
+            <li><span class="t">19:30</span><div><div class="what">抵达集合点 City Center · Korkalonkatu 23 <span class="b b-confirmed">PICKUP &amp; DROP-OFF CONFIRMED</span></div><div class="note"><p>Apukka 官方回复：接送仅提供 Rovaniemi city center（Korkalonkatu 23）和 Santa Claus Village 两个点，不提供其他地点接送；住处靠近市中心，官方建议选 Korkalonkatu 23</p><p>19:40 发车 · 提前约 10 分钟到达（19:30 前到）· 活动结束送回 Korkalonkatu 23，步行回 Airbnb（Valtakatu 40 距市中心很近）</p></div></div></li>
+            <li><span class="t">19:40</span><div><div class="what">Apukka Shuttle 发车</div></div></li>
+            <li class="core"><span class="t">20:30</span><div><div class="what">Snowtrain to Northern Lights Camp <span class="b b-core">核心</span><span class="b b-booked">BOOKED</span></div><div class="note">Apukka Resort · 约 3 小时 · Snowtrain + Arctic forest + Northern Lights Camp + campfire · 包含篝火、热饮/小食及冬季装备等（以最终 voucher 为准）· 固定极光营地体验（非长距离移动追云团）· 增加一个观测极光的晚上</div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>Snowtrain<b>€224 / 2人</b></span></div>
+    </article>
+
+    <article class="day" id="d4">
+      <div class="day-head"><div class="day-num">4</div>
+        <div class="day-meta"><div class="dateline"><span>1月6日 周三</span><span>📍 罗瓦涅米</span></div><h3>Korouoma Frozen Waterfalls</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">全天</div>
+          <ul class="tl">
+            <li><span class="t">07:45</span><div><div class="what">抵达 Beyond Arctic Office · Valtakatu 21 <span class="b b-confirmed">MEETING POINT CONFIRMED</span></div><div class="note"><p>集合点已由供应商确认：Beyond Arctic Office, Valtakatu 21, Rovaniemi · 要求 07:45 到达 · 自行前往 office（与 Airbnb Valtakatu 40 同一条街）</p><p>如有需要，运营方可在活动期间提供保暖冬装和合适的靴子</p></div></div></li>
+            <li class="core"><span class="t">08:00</span><div><div class="what">Beyond Arctic – Korouoma Frozen Waterfalls Adventure <span class="b b-core">核心</span><span class="b b-booked">BOOKED</span><span class="b b-confirmed">START TIME CONFIRMED</span></div><div class="note"><p>Beyond Arctic · Standard rate · Start 08:00 · 约 6–7 小时 · 2 adults · Small group / minivan · Frozen waterfall hiking（约 3 km 徒步）· Campfire lunch · Photography-oriented guide</p><p>注：供应商邮件未单独确认回程送至 Airbnb 的安排，结束时间与回程以当天实际为准</p></div></div></li>
+            <li><span class="t soft">下午</span><div><div class="what">徒步结束 · 返回罗瓦涅米 · 回住宿休息</div><div class="note">预计下午返回 · 18:30 前抵达餐厅即可</div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">晚餐 — 已预订</div>
+          <ul class="tl">
+            <li><span class="t">18:30</span><div><div class="what">晚餐：Ravintola Nili <span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div><div class="note"><p>18:30（芬兰当地时间）· 2人 · À la carte 单点 · Valtakatu 20, 96200 Rovaniemi（与 Airbnb Valtakatu 40 同街，步行即到）</p><p>传统拉普兰料理 · 驯鹿肉 · 北极鱼类 · 当地野生食材 · 预订成功，无需再次预约</p></div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>冰瀑<b>€290 / 2人</b></span></div>
+    </article>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part">
+    <div class="part-title"><h3>玻璃穹顶 — 躺着看极光</h3><span class="range">Day 5 – 7 · NLV / Saariselkä</span><span class="tag">Northern Lights Village · Aurora Cabin</span></div>
+
+    <article class="day" id="d5">
+      <div class="day-head"><div class="day-num">5</div>
+        <div class="day-meta"><div class="dateline"><span>1月7日 周四</span><span>📍 Saariselkä / NLV</span></div><h3>转场 → 玻璃屋第 1 晚</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">白天 — 转场</div>
+          <ul class="tl">
+            <li><span class="t">10:55</span><div><div class="what">Airbnb Valtakatu 40 出发</div><div class="note">Taxi → Rovaniemi Bus Station <span class="b b-toarrange">TO ARRANGE</span></div></div></li>
+            <li><span class="t">11:15</span><div><div class="what">抵达 Rovaniemi Bus Station</div></div></li>
+            <li><span class="t">11:45</span><div><div class="what">长途大巴 Rovaniemi → Saariselkä Holiday Club <span class="b b-booked">BOOKED</span></div><div class="note">Eskelisen Lapin Linjat · Matkahuolto 票 · Rovaniemi → Karasjok express · Rovaniemi Bus Station Bay 2 · 11:45 → 15:30（3h45m）· €49.80/人 · €99.60 / 2人 · No seat reservation · 我们的下车点是 Saariselkä Holiday Club</div></div></li>
+            <li><span class="t">15:30</span><div><div class="what">抵达 Saariselkä Holiday Club</div><div class="note">Holiday Club → NLV：需询问 NLV 是否提供 pickup；如不提供则短程本地 Taxi <span class="b b-toconfirm">TO CONFIRM</span></div></div></li>
+            <li class="core"><span class="t">16:00</span><div><div class="what">入住 Northern Lights Village <span class="b b-booked">BOOKED</span><span class="b b-paid">20% DEPOSIT PAID</span></div><div class="note"><p>1月7–9日 · 2 nights · 2 adults · Aurora Cabin（glass roof）· Stay &amp; Dine · Check-in from 16:00 · Check-out until 12:00 · 总价 €1,288 / 2人</p><p>付款结构：定金已付 €257.60 · 剩余 €1,030.40 将于抵达前 60 天自动扣款（已承诺支出，预算按全额 €1,288 计）· 已付金额不可退款</p><p>Stay &amp; Dine 包含：Aurora Cabin 玻璃穹顶 · 早餐 · 晚餐 · 入住期间免费保暖衣物（连体服/靴子/手套）· 度假村设施（注：房间本身无私人桑拿，Igloo Sauna 为单独预约体验）</p></div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">夜晚 — 机动夜（不安排固定活动）</div>
+          <ul class="tl">
+            <li><span class="t soft">晚餐后</span><div><div class="what">Jan 7 晚 · 三个选择 <span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div>
+              <div class="options">
+                <div class="opt a"><b>Option A · Glass Cabin Aurora Night</b>Saariselkä 当晚晴朗、云量低：Dinner 后在 Aurora Cabin / NLV 周边观测，无需额外报团</div>
+                <div class="opt b"><b>Option B · Mobile Aurora Chase</b>Saariselkä 多云但 Ivalo / Inari / Nellim 方向有明显晴空：临时报外部供应商小团汽车追猎（见下方备选清单）</div>
+                <div class="opt c"><b>Option C · Igloo Sauna &amp; Hot Tub</b>当晚不外出追光时可安排 NLV 自营私享 1 小时（约 €105 / 1–4 人，以实际预订页为准）<span class="b b-optional">OPTIONAL</span> <span class="b b-flexible">FLEXIBLE</span></div>
+              </div>
+              <div class="note" style="margin-top:8px">如 Jan 7 安排 Sauna：20:00–21:00 优先于 21:30–22:30（21:00 后仍留极光观察时间）· <strong>极光天气窗口优先于 Sauna</strong>，若当晚更适合 Mobile Chase，Sauna 改到 Jan 8</div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>巴士<b>€99.60 / 2人</b></span><span>NLV 2晚<b>€1,288 · 定金 €257.60 已付</b></span></div>
+    </article>
+
+    <article class="day" id="d6">
+      <div class="day-head"><div class="day-num">6</div>
+        <div class="day-meta"><div class="dateline"><span>1月8日 周五</span><span>📍 NLV / Saariselkä</span></div><h3>雪地摩托 &amp; 冰钓 + 极光机动夜</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">上午 / 中午</div>
+          <ul class="tl">
+            <li><span class="t">09:45</span><div><div class="what">抵达 NLV Safari House 集合</div></div></li>
+            <li class="core"><span class="t">10:00</span><div><div class="what">[S3] Snowmobile &amp; Ice Fishing <span class="b b-core">核心</span><span class="b b-tobook">TO BOOK</span></div><div class="note"><p>Northern Lights Village Saariselkä · 10:00–14:00（4h）· 集合：NLV Safari House · 2 人共乘一台雪地摩托</p><p>包含：雪地摩托穿越拉普兰荒野 · 冰湖 · 钻冰洞 · 冰钓 · 荒野/湖畔午餐 · 热饮/小食（按运营方 package）· 保暖衣物 · 雪地摩托装备 · 向导带队</p><p>参考价约 €438 / 2人（以实际结账页为准，未订未付，暂不计入已花费）</p></div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">下午</div>
+          <ul class="tl">
+            <li><span class="t">14:00+</span><div><div class="what">返回 NLV · 洗澡 / 休息</div><div class="note">傍晚可选：Igloo Sauna &amp; Hot Tub <span class="b b-optional">OPTIONAL</span> <span class="b b-flexible">FLEXIBLE</span> — 如 Jan 8 安排 Sauna，17:00 优先于 15:30（活动 14:00 结束，15:30 只有约 1.5h 缓冲；17:00 更从容：回来 → 洗澡 → 休息 → Sauna）· 若当晚 Mobile Chase 出发较早则不硬塞，Sauna 可放 Jan 7 · Sauna 的最终日期/时段取决于极光预报、云量、Chase 出发时间与剩余可订时段 · <strong>极光天气窗口优先于 Sauna</strong></div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">晚餐</div>
+          <ul class="tl">
+            <li><span class="t soft">晚餐</span><div><div class="what">Dinner（Stay &amp; Dine 已含）</div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">夜晚 — PRIMARY AURORA INSURANCE NIGHT</div>
+          <ul class="tl">
+            <li class="core"><span class="t soft">晚间</span><div><div class="what">Mobile Aurora Chase Night <span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div>
+              <div class="note">白天已玩雪地摩托，晚上不再重复 Snowmobile 追光；如需主动追极光，<strong>优先真正的汽车 / Minivan Mobile Aurora Chase</strong>（可按实时云层往 Saariselkä / Ivalo / Inari / Nellim 方向移动找晴空）</div>
+              <div class="note" style="margin-top:6px"><strong>决策树：</strong></div>
+              <ul class="tree">
+                <li><b>Case 1</b> · Saariselkä 晴 + 极光条件好 → 不报 Chase，NLV / Aurora Cabin 本地观测</li>
+                <li><b>Case 2</b> · Saariselkä 多云 + Ivalo / Inari / Nellim 有明显晴空 → 报 Mobile Minivan Aurora Chase</li>
+                <li><b>Case 3</b> · 前几晚还没看到满意的强极光 → Jan 8 作为 PRIMARY AURORA INSURANCE NIGHT，优先机动范围更大的汽车 Chase</li>
+                <li><b>Case 4</b> · Jan 3 / 5 / 7 已看到非常漂亮的极光 → 不强制报 Chase，Aurora Cabin / Igloo Sauna / relaxed evening</li>
+              </ul>
+              <div class="note">结束后返回 Aurora Cabin · Glass Cabin Night 2 被动极光机会</div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>S3 雪地摩托&amp;冰钓<b>约 €438 / 2人 · TO BOOK</b></span><span>Igloo Sauna<b>约 €105 · OPTIONAL</b></span><span>Mobile Chase<b>FLEXIBLE · 现场决定</b></span></div>
+    </article>
+
+    <article class="day" id="d7">
+      <div class="day-head"><div class="day-num">7</div>
+        <div class="day-meta"><div class="dateline"><span>1月9日 周六</span><span>📍 NLV → Ivalo → Helsinki</span></div><h3>哈士奇雪橇 + 飞赫尔辛基</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">上午</div>
+          <ul class="tl">
+            <li><span class="t">09:15</span><div><div class="what">抵达 NLV Safari House 集合（出发前 15 分钟）</div></div></li>
+            <li class="core"><span class="t">09:30</span><div><div class="what">[H2] Husky Safari（10km）<span class="b b-core">核心</span><span class="b b-paid">BOOKED / PAID</span></div><div class="note"><p>Northern Lights Village Saariselkä · 09:30–11:15（1h45）· 2 adults · 约 10 km · 2 人一雪橇 · self-driving 自驾哈士奇雪橇 · 集合：NLV Safari House</p><p>已付 €355.87 / 2人（Card charge: SGD 536.39 — 同一笔交易，行程记账按 €355.87 计）</p></div></div></li>
+            <li><span class="t">11:15+</span><div><div class="what">返回 NLV · 取行李 / 收拾准备离开</div><div class="note">Check-out：12:00 前 · 时间允许的话 Lunch / 休息</div></div></li>
+          </ul></div>
+        <div class="block"><div class="block-title">转场（航班 18:35，Husky 11:15 结束，时间非常充裕）</div>
+          <ul class="tl">
+            <li><span class="t soft">下午</span><div><div class="what">NLV → Ivalo Airport <span class="b b-toarrange">TO ARRANGE</span></div><div class="note">NLV 预订确认函注明：住客可向度假村预约前往 Ivalo Airport / Saariselkä 及附近地点的交通 · 计划临近入住时 / 入住期间向 NLV 安排，暂不设定具体出发时间</div></div></li>
+            <li><span class="t">18:35</span><div><div class="what">IVL → HEL 航班 <span class="b b-booked">BOOKED</span></div><div class="note">1月9日 18:35 → 20:05 · CNY 3,530 / 2人</div></div></li>
+            <li><span class="t">20:05</span><div><div class="what">抵达赫尔辛基 · 前往 Hilton Helsinki Airport <span class="b b-booked">BOOKED</span></div><div class="note">希尔顿机场店 · 1月9日入住 · 仅 1 晚（1月9日 → 1月10日）· €145 / 1 night</div></div></li>
+          </ul></div>
+      </div>
+      <div class="costs"><span>哈士奇 10km<b>€355.87 / 2人 · 已付</b></span><span>IVL→HEL 机票<b>CNY 3,530 / 2人</b></span><span>HEL 酒店 1晚<b>€145</b></span></div>
+    </article>
+  </div>
+
+  <!-- PART 3 -->
+  <div class="part">
+    <div class="part-title"><h3>赫尔辛基 — 恢复与告别</h3><span class="range">Day 8 – 9 · Helsinki</span></div>
+
+    <article class="day" id="d8">
+      <div class="day-head"><div class="day-num">8</div>
+        <div class="day-meta"><div class="dateline"><span>1月10日 周日</span><span>📍 Helsinki</span></div><h3>赫尔辛基恢复日</h3></div></div>
+      <div class="day-body">
+        <div class="block"><div class="block-title">全天 — 轻松一天，不安排密集观光</div>
+          <ul class="tl">
+            <li><span class="t soft">上午</span><div><div class="what">Hilton Helsinki Airport 退房 · 寄存行李</div><div class="note">酒店就在机场，行李寄存后进城 · 1月10日晚无需住宿（当晚回机场候机）</div></div></li>
+            <li><span class="t soft">白天</span><div><div class="what">Helsinki 轻松一天 <span class="b b-optional">可选</span></div><div class="note">Finnish sauna（Löyly / Allas）· Old Market Hall · nice dinner</div></div></li>
+            <li><span class="t soft">晚上</span><div><div class="what">前往 HEL Airport</div></div></li>
+          </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d9">
+      <div class="day-head"><div class="day-num">9</div>
+        <div class="day-meta"><div class="dateline"><span>1月11日 周一</span><span>📍 Helsinki → Singapore</span></div><h3>回家</h3></div></div>
+      <div class="day-body">
+        <ul class="tl" style="margin-top:8px">
+          <li><span class="t">00:05</span><div><div class="what">Helsinki → Singapore <span class="b b-booked">BOOKED</span></div><div class="note">Finnair AY131 · 00:05 起飞 · 18:40 抵达新加坡 · 一路平安 ✨</div></div></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  </div>
+</section>
+
+<!-- ===== 预算 ===== -->
+<section class="panel" id="p-budget" role="tabpanel">
+  <div class="ph"><h2>费用明细</h2><span class="en">Budget</span><p>已预订 / 已记录费用按实际支付币种分列（CNY / EUR），不做混合相加。</p></div>
+  <div class="card bars">
+    <h3>欧元支出结构（已记录 €3,854.47）</h3>
+    <div class="bar-row"><span>活动</span><div class="track"><div class="fill" style="width:60.2%"></div></div><span class="amt">€2,321.87</span></div>
+    <div class="bar-row"><span>住宿</span><div class="track"><div class="fill v" style="width:37.2%"></div></div><span class="amt">€1,433.00</span></div>
+    <div class="bar-row"><span>交通</span><div class="track"><div class="fill a" style="width:2.6%"></div></div><span class="amt">€99.60</span></div>
+    <h3 style="margin-top:18px">人民币支出结构（已记录 CNY 27,887）</h3>
+    <div class="bar-row"><span>交通（机票）</span><div class="track"><div class="fill a" style="width:80.1%"></div></div><span class="amt">CNY 22,332</span></div>
+    <div class="bar-row"><span>住宿（Airbnb）</span><div class="track"><div class="fill v" style="width:19.9%"></div></div><span class="amt">CNY 5,555</span></div>
+  </div>
+  <div class="budget">
+    <div class="bcard"><h3>🏠 住宿</h3><ul>
+      <li><div class="lab">Rovaniemi Airbnb · Valtakatu 40（4晚）<small>12月20日前可全额退款 <span class="b b-booked">BOOKED</span></small></div><span class="amt">CNY 5,555</span></li>
+      <li><div class="lab">NLV Saariselkä · Aurora Cabin（1月7–9 · 2晚 · Stay &amp; Dine）<small>定金 €257.60 已付 · 余 €1,030.40 抵达前 60 天自动扣款（已承诺支出，按全额 €1,288 计入总额）· 已付金额不可退 <span class="b b-paid">20% DEPOSIT PAID</span></small></div><span class="amt">€1,288</span></li>
+      <li><div class="lab">Hilton Helsinki Airport 希尔顿机场店（1月9–10 · 仅1晚）</div><span class="amt">€145</span></li>
+    </ul><div class="sub-total"><span>小计</span><span>CNY 5,555 + €1,433</span></div></div>
+
+    <div class="bcard"><h3>🏟 活动（已确定 · 已预订）</h3><ul>
+      <li><div class="lab">Jan 3 · Wild About Lapland Guaranteed Aurora Hunt</div><span class="amt">€340</span></li>
+      <li><div class="lab">Jan 4 · Sampo Icebreaker Cruise + Photography（官网直订 · 已付清）<small>Cruise + Rovaniemi transfer €1,052 · Photography €60 <span class="b b-paid">BOOKED / PAID</span></small></div><span class="amt">€1,112</span></li>
+      <li><div class="lab">Jan 5 · Apukka Snowtrain to Northern Lights Camp</div><span class="amt">€224</span></li>
+      <li><div class="lab">Jan 6 · Beyond Arctic Korouoma Frozen Waterfalls</div><span class="amt">€290</span></li>
+      <li><div class="lab">Jan 9 · NLV Husky Safari 10km（已付）<small>Card charge: SGD 536.39 — 同一笔交易，不另计 <span class="b b-paid">BOOKED / PAID</span></small></div><span class="amt">€355.87</span></li>
+    </ul><div class="sub-total"><span>小计</span><span>€2,321.87</span></div></div>
+
+    <div class="bcard"><h3>✈ 交通</h3><ul>
+      <li><div class="lab">国际机票 SIN⇄HEL（AY132 / AY131）</div><span class="amt">CNY 16,572</span></li>
+      <li><div class="lab">HEL → RVN 内陆航班</div><span class="amt">CNY 2,230</span></li>
+      <li><div class="lab">IVL → HEL 内陆航班</div><span class="amt">CNY 3,530</span></li>
+      <li><div class="lab">RVN → Saariselkä 大巴</div><span class="amt">€99.60</span></li>
+    </ul><div class="sub-total"><span>小计</span><span>CNY 22,332 + €99.60</span></div></div>
+
+    <div class="bcard pending-card"><h3>📋 待预订 / 未计入已花费</h3><ul>
+      <li><div class="lab">Jan 8 · S3 Snowmobile &amp; Ice Fishing（约 €438 / 2人）</div><span class="b b-tobook">TO BOOK</span></li>
+      <li><div class="lab">Jan 7/8 · Igloo Sauna &amp; Hot Tub（约 €105）</div><span class="b b-optional">OPTIONAL / FLEXIBLE</span></li>
+      <li><div class="lab">Jan 7/8 · Mobile Aurora Chase（价格视供应商）</div><span class="b b-weather">WEATHER-DEPENDENT</span></li>
+      <li><div class="lab">Jan 9 · NLV → Ivalo Airport 接送</div><span class="b b-toarrange">TO ARRANGE</span></li>
+      <li><div class="lab">各段本地 Taxi</div><span class="b b-toarrange">TO ARRANGE</span></li>
+      <li><div class="lab">未含餐食</div><span class="b b-none">现场支付</span></li>
+    </ul><div class="sub-total"><span>小计</span><span>未计入</span></div></div>
+
+    <div class="total">
+      <div><h3>Booked / Recorded So Far</h3><div class="big">CNY 27,887 · EUR 3,854.47</div>
+        <p>以上为已预订 / 已记录费用（2人合计），按实际支付币种分列，不混合相加。NLV 按全额 €1,288 计入（定金 €257.60 已付 + 余款 €1,030.40 将于抵达前 60 天自动扣款，视为已承诺支出）。Estimated SGD equivalent based on displayed exchange rate; actual card charges may differ.</p></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== 预订与待办 ===== -->
+<section class="panel" id="p-bookings" role="tabpanel">
+  <div class="ph"><h2>预订状态总览</h2><span class="en">Bookings &amp; to-do</span></div>
+  <div class="legend">
+    <div><span class="b b-booked">BOOKED</span>已完成预订</div>
+    <div><span class="b b-paid">PAID</span>已付款</div>
+    <div><span class="b b-confirmed">CONFIRMED</span>具体安排已由供应商明确确认</div>
+    <div><span class="b b-waiting">WAITING FOR REPLY</span>请求已发出，等待回复</div>
+    <div><span class="b b-tobook">TO BOOK</span>确定参加但尚未预订付款</div>
+    <div><span class="b b-toarrange">TO ARRANGE</span>后续安排，现在不需锁定</div>
+    <div><span class="b b-toconfirm">TO CONFIRM</span>某项安排尚待确认</div>
+    <div><span class="b b-optional">OPTIONAL</span>不一定参加</div>
+    <div><span class="b b-flexible">FLEXIBLE</span>刻意保留机动</div>
+    <div><span class="b b-weather">WEATHER-DEPENDENT</span>取决于天气/云量/极光条件</div>
+  </div>
+  <div class="callout">注意：BOOKED 与 CONFIRMED 不混用 — BOOKED 指活动/预订本身已完成，CONFIRMED 指具体接送/集合安排已由供应商明确确认。</div>
+
+  <h3 class="tbl-title">✅ Before Trip Checklist · 出发前待办速览</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th style="width:190px">类别</th><th>事项</th></tr></thead>
+    <tbody>
+      <tr><td><span class="b b-confirmed">COMPLETED / CONFIRMED</span></td><td><ul class="chk">
+        <li class="done">1/3 Wild About Lapland 集合与返程安排</li>
+        <li class="done">1/4 Sampo pickup：Scandic Pohjanhovi · 10:00</li>
+        <li class="done">1/4 Sampo 回程 drop-off：Scandic Pohjanhovi</li>
+        <li class="done">1/5 Apukka 接送：Korkalonkatu 23 往返（官方确认不提供其他地点）</li>
+        <li class="done">1/6 Beyond Arctic 集合点：Office, Valtakatu 21</li>
+        <li class="done">1/6 Beyond Arctic 07:45 集合 / 08:00 出发</li>
+        <li class="done"><strong>1/6 Ravintola Nili 晚餐 18:30 · 2人 · 预订成功</strong></li>
+        <li class="done">1/9 NLV Husky Safari 10km · 09:30–11:15 · 已订已付</li></ul></td></tr>
+      <tr><td><span class="b b-pending">PENDING RESERVATION</span></td><td><ul class="chk">
+        <li>1/5 Lappish Restaurant Taiga 晚餐 17:00 · 2人 — 尚未开放预约，<strong>2026年12月初检查预约系统</strong>，开放后尽快预订（需确认 90 分钟内完成用餐）</li>
+        <li>1/3 Arctic Restaurant 17:00 — 核对追光集合时间后决定是否预约</li>
+        <li>核对各餐厅 2027年1月实际营业时间 / 节假日安排 / 取消政策</li></ul></td></tr>
+      <tr><td><span class="b b-toconfirm">TO CONFIRM</span></td><td><ul class="chk"><li>1/7 Saariselkä Holiday Club → NLV 交通</li></ul></td></tr>
+      <tr><td><span class="b b-tobook">TO BOOK</span></td><td><ul class="chk"><li>1/8 NLV S3 Snowmobile &amp; Ice Fishing · 10:00–14:00</li></ul></td></tr>
+      <tr><td><span class="b b-toarrange">TO ARRANGE</span></td><td><ul class="chk"><li>1/9 NLV → Ivalo Airport 接送（入住期间向 NLV 安排）</li></ul></td></tr>
+      <tr><td><span class="b b-weather">FLEXIBLE / WEATHER-DEPENDENT</span></td><td><ul class="chk">
+        <li>1/7 或 1/8 Igloo Sauna &amp; Hot Tub（按极光天气和剩余时段选日期）</li>
+        <li>1/7 或 1/8 外部小团 Mobile Aurora Chase（按实际天气与云量决定）</li></ul></td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🎄 已预订活动</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期 / 活动</th><th>服务商</th><th>价格（2人）</th><th>状态 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 3 · Guaranteed Northern Lights Hunting Adventure<span class="sub">19:00–02:00, ~7h</span></td><td>Wild About Lapland</td><td><span class="price">€340</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">交通 CONFIRMED</span></div>自行前往 Wild About Lapland Office 集合 · 返程可送回住宿（活动当天告诉导游/司机送回 Airbnb Valtakatu 40）· 含专业导游摄影</td></tr>
+      <tr><td>Jan 4 · Icebreaker Sampo Afternoon Cruise with transfer from Rovaniemi<span class="sub">13:30–17:30</span></td><td>The Icebreaking Company（官网直订）</td><td><span class="price">€1,112</span><span class="sub">Cruise €1,052 + 摄影 €60</span></td><td><div class="badges"><span class="b b-paid">BOOKED / PAID</span><span class="b b-confirmed">PICKUP &amp; DROP-OFF CONFIRMED</span></div>已付清 · Balance €0 · 含 Rovaniemi 往返 shuttle · 供应商已确认：Scandic Pohjanhovi Hotel（Pohjanpuistikko 2）10:00 上车 · 09:45–09:50 在正门外等候 · 大型黑色巴士 / Icebreaker 标识 · 回程约 19:40 送回 Scandic Pohjanhovi<br>取消政策：开始前 14 天（GMT+2）之前免费取消，全额退款 · 建议最晚 2026/12/20 前处理</td></tr>
+      <tr><td>Jan 5 · Snowtrain to Northern Lights Camp<span class="sub">~3h</span></td><td>Apukka Resort</td><td><span class="price">€224</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">PICKUP &amp; DROP-OFF CONFIRMED</span></div>官方确认：接送仅限 Korkalonkatu 23（city center）或 Santa Claus Village，不提供其他地点 · 选 Korkalonkatu 23 · 19:40 发车，19:30 前到 · 回程送回同一点，步行回 Airbnb · 包含项目以最终 voucher 为准</td></tr>
+      <tr><td>Jan 6 · Korouoma Frozen Waterfalls Adventure<span class="sub">Start 08:00, ~6–7h</span></td><td>Beyond Arctic</td><td><span class="price">€290</span><span class="sub">€145/人</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">MEETING LOCATION &amp; TIME CONFIRMED</span></div>供应商已确认：自行前往 Beyond Arctic Office, Valtakatu 21 · 07:45 到达 · 08:00 出发 · 如需可借保暖冬装和靴子 · 约 3km 徒步<br>注：回程送至 Airbnb 未在邮件中单独确认，不视为已确认安排</td></tr>
+      <tr><td>Jan 9 · [H2] Husky Safari 10km<span class="sub">09:30–11:15, 1h45</span></td><td>Northern Lights Village Saariselkä</td><td><span class="price">€355.87</span><span class="sub">Card charge: SGD 536.39（同一笔交易，不重复计）</span></td><td><div class="badges"><span class="b b-paid">BOOKED / PAID</span></div>2 adults · 约 10 km · 2 人一雪橇 · self-driving · 集合：NLV Safari House · 09:15 到（出发前 15 分钟）</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">✈ 交通</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>路线</th><th>服务商</th><th>价格（2人）</th><th>状态 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 2 · SIN → HEL · AY132 22:05 → 05:45(+1)<br>Jan 11 · HEL → SIN · AY131 00:05 → 18:40</td><td>Finnair</td><td><span class="price">CNY 16,572</span></td><td><span class="b b-booked">BOOKED</span></td></tr>
+      <tr><td>Jan 3 · HEL → RVN · 11:55</td><td>Finnair</td><td><span class="price">CNY 2,230</span></td><td><span class="b b-booked">BOOKED</span></td></tr>
+      <tr><td>Jan 7 · RVN Bus Station (Bay 2) 11:45 → Saariselkä Holiday Club 15:30 · 3h45m</td><td>Eskelisen Lapin Linjat / Matkahuolto</td><td><span class="price">€99.60</span><span class="sub">€49.80/人</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span></div>Rovaniemi → Karasjok express · No seat reservation · 下车点为 Saariselkä Holiday Club</td></tr>
+      <tr><td>Jan 9 · IVL → HEL · 18:35 → 20:05</td><td>Finnair</td><td><span class="price">CNY 3,530</span></td><td><span class="b b-booked">BOOKED</span></td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🏠 住宿</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>住宿</th><th>日期</th><th>价格</th><th>状态 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Rovaniemi Airbnb · Valtakatu 40, 96200</td><td>Jan 3 – 7 · 4 nights</td><td><span class="price">CNY 5,555</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span></div>12月20日前可全额退款</td></tr>
+      <tr><td>Northern Lights Village Saariselkä · Aurora Cabin（glass roof）</td><td>Jan 7 – 9 · 2 nights · Stay &amp; Dine · Check-in from 16:00 · Check-out until 12:00</td><td><span class="price">€1,288</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-paid">20% DEPOSIT PAID</span></div>定金已付 €257.60 · 剩余 €1,030.40 于抵达前 60 天自动扣款 · 已付金额不可退款<br>含早餐、晚餐、入住期间保暖衣物（连体服/靴子/手套）、度假村设施</td></tr>
+      <tr><td>Hilton Helsinki Airport · 希尔顿机场店</td><td>Jan 9 – 10 · 仅 1 晚</td><td><span class="price">€145</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span></div>1月10日晚无需住宿（红眼航班）</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🚌 接送 / 地面交通状态总览</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期</th><th>路线 / 项目</th><th>状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 3</td><td>Wild About Lapland 集合与返程</td><td><span class="b b-confirmed">CONFIRMED</span></td><td>自行前往 Wild About Lapland Office 集合 · 返程可送回 Airbnb —— 活动当天告诉导游/司机</td></tr>
+      <tr><td>Jan 4</td><td>Sampo Icebreaker 官方 shuttle</td><td><span class="b b-confirmed">CONFIRMED</span></td><td>Pickup &amp; drop-off 均已确认：Scandic Pohjanhovi Hotel（Pohjanpuistikko 2）· 10:00 上车，09:45–09:50 在正门外等候 · 大型黑色巴士 / Icebreaker 标识 · 回程约 19:40 送回 Scandic Pohjanhovi（视路况）</td></tr>
+      <tr><td>Jan 5</td><td>Apukka Snowtrain 接送</td><td><span class="b b-confirmed">CONFIRMED</span></td><td>官方确认仅提供 Korkalonkatu 23（city center）/ Santa Claus Village 两点接送 · 选 Korkalonkatu 23 · 19:40 发车，19:30 前到 · 回程送回同一点，步行回 Airbnb</td></tr>
+      <tr><td>Jan 6</td><td>Beyond Arctic Korouoma 集合</td><td><span class="b b-confirmed">CONFIRMED</span></td><td>集合点与时间已确认：自行前往 Beyond Arctic Office, Valtakatu 21 · 07:45 到达 · 08:00 出发 · 如需可借冬装和靴子 · 回程送至 Airbnb 未单独确认</td></tr>
+      <tr><td>Jan 7</td><td>Airbnb → Rovaniemi Bus Station</td><td><span class="b b-toarrange">TO ARRANGE</span></td><td>Taxi · 建议约 10:55 出发 · 约 11:15 到车站 · 大巴 11:45 发车</td></tr>
+      <tr><td>Jan 7</td><td>Saariselkä Holiday Club → NLV</td><td><span class="b b-toconfirm">TO CONFIRM</span></td><td>需询问 NLV 是否提供 pickup · 否则本地短程 Taxi</td></tr>
+      <tr><td>Jan 9</td><td>NLV → Ivalo Airport</td><td><span class="b b-toarrange">TO ARRANGE</span></td><td>NLV 确认函注明住客可向度假村预约机场交通 · 临近入住时/入住期间向 NLV 安排 · 不设定未经确认的出发时间 · Husky 11:15 结束，距 18:35 航班时间充裕</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">📋 其他待办（未计入已花费）</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th style="width:40px">#</th><th>项目</th><th>状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Jan 8 · [S3] Snowmobile &amp; Ice Fishing · 10:00–14:00</td><td><span class="b b-tobook">TO BOOK</span></td><td>NLV · 约 €438 / 2人（以实际结账页为准）· 未订未付，不计入已花费</td></tr>
+      <tr><td>2</td><td>Jan 7 或 Jan 8 · Igloo Sauna &amp; Hot Tub（NLV 自营 · 私享 1h）</td><td><div class="badges"><span class="b b-optional">OPTIONAL</span><span class="b b-flexible">FLEXIBLE</span></div></td><td>约 €105 / 1–4 人（以实际预订页为准）· 按极光天气和剩余时段选日期 · 极光窗口优先</td></tr>
+      <tr><td>3</td><td>Jan 7 / Jan 8 · Mobile Aurora Chase</td><td><div class="badges"><span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div></td><td>价格视所选供应商而定（见下方备选清单）· 按实际云况和可订情况决定</td></tr>
+      <tr><td>4</td><td>Jan 9 · NLV → Ivalo Airport</td><td><span class="b b-toarrange">TO ARRANGE</span></td><td>入住期间向 NLV 安排</td></tr>
+      <tr><td>5</td><td>各段本地 Taxi</td><td><span class="b b-toarrange">TO ARRANGE</span></td><td>Airbnb → 车站 / Holiday Club → NLV（如无 pickup）等</td></tr>
+      <tr><td>6</td><td>Helsinki local transport / airport transport</td><td><span class="b b-toarrange">TO ARRANGE</span></td><td>机场快线 / 电车等</td></tr>
+      <tr><td>7</td><td>未含在住宿 / 活动 package 里的餐食</td><td><span class="b b-none">现场支付</span></td><td>不计入已花费</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🍴 罗瓦涅米餐厅安排 · Dining</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期 / 餐厅</th><th>类型 / 特色</th><th>状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 6 · Ravintola Nili · 18:30<span class="sub"><a href="https://nili.fi/en/contact/">nili.fi</a> · <a href="https://book.dinnerbooking.com/">dinnerbooking.com</a></span></td><td>传统拉普兰料理 · 驯鹿肉 · 北极鱼类 · 当地野生食材</td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div></td><td>2人 · À la carte · Valtakatu 20, 96200 Rovaniemi（Airbnb 同街步行即到）· 预订成功，无需再约 · 优先级 1</td></tr>
+      <tr><td>Jan 5 · Lappish Restaurant Taiga · 目标 17:00<span class="sub"><a href="https://www.restauranttaiga.fi/">restauranttaiga.fi</a></span></td><td>现代拉普兰料理 · 驯鹿 · 北极鱼类 · 森林浆果</td><td><span class="b b-pending">PENDING RESERVATION</span></td><td>尚未开放预约 · <strong>2026年12月初检查预约系统，开放后尽快预订</strong> · 2人 · 需 18:30 前结束（19:30 到 Apukka 集合点）· 预约时确认 90 分钟内完成用餐 · 优先级 2</td></tr>
+      <tr><td>Jan 3 · Arctic Restaurant · 17:00 可选<span class="sub"><a href="https://www.arcticrestaurant.fi/">arcticrestaurant.fi</a></span></td><td>现代北欧料理 · 北极鱼类 · 驯鹿</td><td><span class="b b-none">未预约</span></td><td>第三家值得考虑的正式餐厅 · 需核对追光接送时间（18:40 出发去 WAL office）后再决定 · 优先级 3</td></tr>
+      <tr><td>Gustav Kitchen &amp; Bar<span class="sub"><a href="https://www.gustavkitchenbar.fi/en/home/">gustavkitchenbar.fi</a></span></td><td>现代欧洲及北欧料理 · 休闲氛围</td><td><span class="b b-none">未预约</span></td><td>Jan 5 Taiga 无法预约时的替代选择 · 优先级 4</td></tr>
+      <tr><td>Restaurant Gaissa</td><td>传统芬兰及拉普兰料理</td><td><span class="b b-none">未预约</span></td><td>市中心临时用餐备选 · 优先级 5</td></tr>
+      <tr><td>Pure Burger Rovaniemi</td><td>汉堡 · 休闲快餐</td><td><span class="b b-none">未预约</span></td><td>普通简餐备选 · 优先级最低，无需特别安排</td></tr>
+    </tbody></table></div>
+  <p class="lede" style="margin-top:-18px">Jan 4 Sampo 当天船上含午餐，晚上不预约正式晚餐；Jan 7 起入住 NLV Stay &amp; Dine 含早晚餐。餐厅营业时间 / 节假日安排 / 取消政策以 2027年1月各店实际信息为准。</p>
+
+  
+</section>
+
+<!-- ===== 极光策略 ===== -->
+<section class="panel" id="p-aurora" role="tabpanel">
+  <div class="ph"><h2>极光策略</h2><span class="en">Aurora strategy</span><p>五个观测夜，四种方式：移动追猎、固定营地、玻璃屋、机动保险夜。极光天气窗口优先于一切可选项目。</p></div>
+  <h3 class="tbl-title">❄ NLV / 萨里山 参考表（Day 5–7）</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期 / 活动</th><th>服务商</th><th>状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 7 / Jan 8 · Igloo Sauna &amp; Hot Tub</td><td>Northern Lights Village</td><td><div class="badges"><span class="b b-flexible">FLEXIBLE</span><span class="b b-optional">OPTIONAL</span></div></td><td>私享 1h · 约 €105 / 1–4 人（以实际预订页为准）· 旅行者偏好 Igloo Sauna &amp; Hot Tub 而非传统芬兰桑拿 · 按极光天气和可订时段选 Jan 7 或 Jan 8 · 极光窗口优先于 Sauna</td></tr>
+      <tr><td>Jan 8 · [S3] Snowmobile &amp; Ice Fishing · 10:00–14:00（4h）</td><td>Northern Lights Village</td><td><span class="b b-tobook">TO BOOK</span></td><td>2 人共乘一台雪地摩托 · 约 €438 / 2人（以实际结账页为准）· 集合：Safari House · 建议 09:45 到</td></tr>
+      <tr><td>Jan 7 / Jan 8 · Mobile Aurora Chase</td><td>Arctic Tours / Northwild / Ivalo Experiences / Ivalo Taxi</td><td><div class="badges"><span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div></td><td>按实际云况和可订情况选择（详见下方备选清单）</td></tr>
+      <tr><td>Jan 9 · [H2] Husky Safari 10km · 09:30–11:15</td><td>Northern Lights Village</td><td><span class="b b-paid">BOOKED / PAID</span></td><td>已付 €355.87 / 2人 · 集合：Safari House · 09:15 到</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🌌 极光策略 · Aurora Strategy</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期</th><th>观测方式</th><th>状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 3</td><td>Wild About Lapland · Guaranteed Northern Lights Hunting Adventure（移动小巴追猎 · ~7h）</td><td><span class="b b-booked">BOOKED</span></td><td>€340 / 2人 · 自行前往 WAL office 集合 · 返程可送回 Airbnb（活动中告知导游/司机）· 含摄影</td></tr>
+      <tr><td>Jan 4</td><td>条件允许时自行观测</td><td><span class="b b-optional">OPTIONAL</span></td><td>Sampo 当天 19:40 回 Rovaniemi · 晚上不强排活动</td></tr>
+      <tr><td>Jan 5</td><td>Apukka · Snowtrain to Northern Lights Camp（固定营地式极光体验）</td><td><span class="b b-booked">BOOKED</span></td><td>€224 / 2人 · 接送已确认：Korkalonkatu 23 往返 · 19:40 发车（19:30 前到）</td></tr>
+      <tr><td>Jan 6</td><td>条件允许时自行观测</td><td><span class="b b-optional">OPTIONAL</span></td><td>Korouoma 全天活动后休息为主</td></tr>
+      <tr><td>Jan 7</td><td>NLV Aurora Cabin Night：Glass Cabin / Mobile Chase / Igloo Sauna 三选</td><td><span class="b b-flexible">FLEXIBLE</span></td><td>按云量决定</td></tr>
+      <tr><td>Jan 8</td><td>PRIMARY AURORA INSURANCE NIGHT：Aurora Cabin + 汽车/Minivan Mobile Chase 保险</td><td><div class="badges"><span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div></td><td>如需机动追光优先汽车/小巴 Chase，不选雪地摩托追光（白天已玩雪地摩托）</td></tr>
+    </tbody></table></div>
+  <p class="lede" style="margin-top:-18px">多晚、多种观测方式（移动追猎 / 固定营地 / 玻璃屋 / 机动保险夜），可根据云量灵活调整 — 不构成对看到极光的保证。</p>
+
+  <h3 class="tbl-title">🚗 Mobile Aurora Chase · 备选清单（Weather Backup）</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>供应商 / 产品</th><th>规格</th><th>参考价</th><th>特点</th></tr></thead>
+    <tbody>
+      <tr><td>Arctic Tours Saariselkä<span class="sub">Aurora Hunt by Minibus · <a href="https://www.arctictours.fi/northernlights">arctictours.fi</a></span></td><td>小团 Minibus · 约 3–4h</td><td><span class="price">约 from €128/人</span></td><td><div class="badges"><span class="b b-shortlist">SHORTLIST</span></div>Saariselkä pickup · 按天气/云况调整路线 · 含极光摄影 · 优先候选</td></tr>
+      <tr><td>Arctic Tours Saariselkä<span class="sub">Aurora Guarantee Experience</span></td><td>约 3–6h</td><td><span class="price">约 from €198/人</span></td><td><div class="badges"><span class="b b-shortlist">SHORTLIST</span></div>更激进的天气追猎 · 搜索范围/时间更长 · 现产品宣传未见到极光可退款（以运营方条款为准）· 可能有最低成团人数 · 前几晚失败时的加强版「极光保险」</td></tr>
+      <tr><td>Northwild<span class="sub">Premium Northern Lights Experience — Science, Stories &amp; Photos · <a href="https://www.northwild.eu/">northwild.eu</a></span></td><td>约 4h · 最多 8 人</td><td><span class="price">约 €129/人</span></td><td><div class="badges"><span class="b b-shortlist">SHORTLIST</span></div>Saariselkä / Ivalo / Lake Inari · 小团 · 用气象图+云量预报调整路线 · 含摄影 · Saariselkä 可接 · 小团强力候选</td></tr>
+      <tr><td>Ivalo Experiences<span class="sub">Aurora Hunting by Minivan · <a href="https://ivaloexperiences.com/">ivaloexperiences.com</a></span></td><td>约 3h · 约 2–8 人</td><td><span class="price">约 €150/人</span></td><td><div class="badges"><span class="b b-shortlist">SHORTLIST</span></div>Ivalo / Saariselkä / Inari · Minivan 小团 · 视住宿位置可接送</td></tr>
+      <tr><td>Ivalo Taxi<span class="sub">Private Aurora Hunting · <a href="https://www.ivalotaxi.fi/en/aurora-hunting/">ivalotaxi.fi</a></span></td><td>私享车 · 1–7 人</td><td>视车型/时长</td><td><div class="badges"><span class="b b-shortlist">SHORTLIST</span></div>Saariselkä / Ivalo / Inari · 按天气/云层定路线 · 适合 last-minute · 天气临时变化时的好选择</td></tr>
+    </tbody></table></div>
+  <p class="lede" style="margin-top:-18px">选择优先级：本地晴 → 留在 NLV 观测；需要小团机动追猎 → Arctic Tours / Northwild；需要更强的长距离天气保险 → Arctic Tours Guarantee；需要私享 / last-minute 机动 → Ivalo Taxi。以上均为备选（SHORTLIST · FLEXIBLE · WEATHER-DEPENDENT），无任何一家已预订；价格与取消条款以各运营方实时页面为准。</p>
+
+  
+</section>
+
+<!-- ===== 评价与参考 ===== -->
+<section class="panel" id="p-refs" role="tabpanel">
+  <div class="ph"><h2>行程评价</h2><span class="en">Review</span></div>
+  <div class="review">
+    <div class="bcard"><h3>✅ 优势</h3><ul>
+      <li>多晚、多种观测方式（1/3 移动追猎 · 1/5 Snowtrain 营地 · 1/7 玻璃屋 · 1/8 机动保险夜 · 1/8 玻璃屋），可根据云量灵活调整 — 不构成看到极光的保证</li>
+      <li>罗瓦涅米核心项目已锁定；Saariselkä 保留天气机动空间</li>
+      <li>D7 航班为傍晚 18:35，Husky 11:15 结束，当天时间非常充裕</li>
+      <li>玻璃屋没有浪费，两晚都有被动极光观测机会</li>
+    </ul></div>
+    <div class="bcard todo"><h3>💡 待办 / 提醒</h3><ul>
+      <li><strong>接送全部确认</strong> — WAL：自行到 office，返程可送回 Airbnb · Sampo：Scandic Pohjanhovi 10:00 上车 / 约 19:40 送回 · Apukka：Korkalonkatu 23 往返（官方不提供其他地点接送）· Beyond Arctic：自行前往 Office Valtakatu 21，07:45 集合</li>
+      <li><strong>需要预订 / 安排</strong> — 1/8 NLV S3 Snowmobile &amp; Ice Fishing（10:00–14:00）· 确认 1/7 Holiday Club→NLV 交通 · 1/9 NLV→Ivalo 机场交通入住期间向 NLV 安排</li>
+      <li><strong>保持机动</strong> — 1/7 与 1/8 晚均 FLEXIBLE / WEATHER-DEPENDENT（Glass Cabin / Mobile Chase / Igloo Sauna 按云量定）· 极光天气窗口优先于 Sauna</li>
+      <li><strong>关键取消节点</strong> — Airbnb：12月20日前全额退款 · Sampo：开始前 14 天（GMT+2）免费取消，建议最晚 2026/12/20 前处理 · NLV 已付定金不可退</li>
+    </ul></div>
+  </div>
+
+  <div class="ph" style="margin-top:30px"><h2>参考资料</h2><span class="en">References &amp; useful links</span></div>
+  <p class="lede">各项目的官方网站与预订入口，按活动 / 住宿 / 交通 / 餐厅分类。已确认预订与备选项目分别标注；公开版本不含私人订单编号与联系方式，具体集合安排与票面信息以各自确认邮件 / 电子票为准。</p>
+
+  <h3 class="tbl-title">🌌 活动 · Activities</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>日期 / 项目</th><th>状态</th><th>价格（2人）</th><th>链接 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 3 · Guaranteed Northern Lights Hunting Adventure<span class="sub">Wild About Lapland</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div></td><td><span class="price">€340</span></td><td><a href="https://wildaboutlapland.com">wildaboutlapland.com</a> · 夜间小团追极光（19:00–02:00）· 含导游摄影 · Original booking link to be added</td></tr>
+      <tr><td>Jan 4 · Icebreaker Sampo Afternoon Cruise<span class="sub">The Icebreaking Company / Experience365</span></td><td><div class="badges"><span class="b b-paid">BOOKED / PAID</span><span class="b b-confirmed">CONFIRMED</span></div></td><td><span class="price">€1,112</span><span class="sub">含 €60 摄影</span></td><td><a href="https://experience365.fi/icebreaker-sampo-cruise/">experience365.fi/icebreaker-sampo-cruise</a> · 官方直订（此前 Klook 订单已取消）· 含往返接驳 / 船上午餐 / 迎宾饮品 / 导览 / 冰上行走与漂浮 / SnowCastle 门票 / 摄影 · 集合安排以官方确认邮件为准</td></tr>
+      <tr><td>Jan 5 · Snowtrain to Northern Lights Camp<span class="sub">Apukka Resort</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div></td><td><span class="price">€224</span><span class="sub">€112/人</span></td><td><a href="https://apukkaresort.fi/activities/winter-activities/northern-lights-tours-in-winter/snowtrain-to-northern-lights-camp/">apukkaresort.fi · Snowtrain 项目页</a> · 雪地列车 / 极光营地 / 篝火 / 热饮 / 冬装 · 集合点 Korkalonkatu 23 · 19:40（已获官方确认）</td></tr>
+      <tr><td>Jan 6 · Korouoma Frozen Waterfalls Adventure<span class="sub">Beyond Arctic</span></td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div></td><td><span class="price">€290</span></td><td><a href="https://beyondarctic.com">beyondarctic.com</a> · 冬季峡谷徒步 / 冰瀑景观 · 集合：Beyond Arctic Office, Valtakatu 21 · 07:45（已获官方确认）· Original booking link to be added</td></tr>
+      <tr><td>Jan 8 · [S3] Snowmobile &amp; Ice Fishing<span class="sub">Northern Lights Village</span></td><td><span class="b b-tobook">TO BOOK</span></td><td><span class="price">约 €438</span></td><td><a href="https://saariselka.northernlightsvillage.com/experiences">NLV 体验活动总目录</a> · 10:00–14:00 · 优先酒店自营；满额再比较第三方 · 预订时确认驾驶条件 / 保险自付额 / 防寒服是否包含</td></tr>
+      <tr><td>Jan 8 晚 · Aurora Evening<span class="sub">参考：A3 Aurora Hunting by Snowmobile 或外部小巴追猎</span></td><td><div class="badges"><span class="b b-flexible">FLEXIBLE</span><span class="b b-weather">WEATHER-DEPENDENT</span></div></td><td>视选择</td><td><a href="https://saariselka.northernlightsvillage.com/experiences">NLV 体验目录</a> · 外部供应商见上方「Mobile Aurora Chase 备选清单」· 按当晚云量现场决定，不提前锁定</td></tr>
+      <tr><td>Jan 9 · [H2] Husky Safari 10km<span class="sub">Northern Lights Village</span></td><td><span class="b b-paid">BOOKED / PAID</span></td><td><span class="price">€355.87</span></td><td><a href="https://saariselka.northernlightsvillage.com/experiences">NLV 体验活动总目录</a> · 选 10km 不选 5km · 约 1h45（含约 1h 雪橇行程）· 09:30–11:15 · 当晚 18:35 航班，时间已核算充裕</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🏠 住宿 · Accommodation</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>住宿</th><th>日期</th><th>状态</th><th>链接 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Rovaniemi Airbnb · Valtakatu 40</td><td>Jan 3–7 · 4 nights</td><td><span class="b b-booked">BOOKED</span></td><td>CNY 5,555 · 12月20日前可全额退款 · 预订详情见 Airbnb 订单</td></tr>
+      <tr><td>Northern Lights Village Saariselkä · Aurora Cabin</td><td>Jan 7–9 · 2 nights</td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-paid">20% DEPOSIT PAID</span></div></td><td><a href="https://saariselka.northernlightsvillage.com/">saariselka.northernlightsvillage.com</a> · <a href="https://saariselka.northernlightsvillage.com/experiences">体验活动总目录</a> · €1,288 / 2人 · Stay &amp; Dine</td></tr>
+      <tr><td>Hilton Helsinki Airport</td><td>Jan 9–10 · 1 night</td><td><span class="b b-booked">BOOKED</span></td><td>€145 · 酒店在机场，退房后可寄存行李</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">✈ 交通 · Transport</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>路线</th><th>状态</th><th>链接 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>国际 + 芬兰境内航班（SIN⇄HEL · HEL→RVN Jan 3 · IVL→HEL Jan 9 18:35）</td><td><span class="b b-booked">BOOKED</span></td><td><a href="https://www.finnair.com/">finnair.com</a> · 航班时间与出票状态以电子机票为准</td></tr>
+      <tr><td>Jan 7 · Rovaniemi → Saariselkä 大巴（Eskelisen Lapin Linjat）</td><td><span class="b b-booked">BOOKED</span></td><td><a href="https://www.eskelisen.fi/en/timetables-and-routes/">eskelisen.fi 时刻表</a> · <a href="https://www.matkahuolto.fi/en">matkahuolto.fi 查询购票</a> · 11:45 → 15:30 · 具体车次以已购车票为准</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🍴 餐厅 · Dining</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>餐厅</th><th>状态</th><th>链接 / 备注</th></tr></thead>
+    <tbody>
+      <tr><td>Ravintola Nili · Jan 6 · 18:30 · 2人</td><td><div class="badges"><span class="b b-booked">BOOKED</span><span class="b b-confirmed">CONFIRMED</span></div></td><td><a href="https://nili.fi/en/contact/">nili.fi</a> · 订位平台 <a href="https://book.dinnerbooking.com/">dinnerbooking.com</a> · Valtakatu 20, Rovaniemi</td></tr>
+      <tr><td>Lappish Restaurant Taiga · 目标 Jan 5 · 17:00 · 2人</td><td><span class="b b-pending">PENDING RESERVATION</span></td><td><a href="https://www.restauranttaiga.fi/">restauranttaiga.fi</a> · 2026年12月预约开放后再订</td></tr>
+      <tr><td>Arctic Restaurant · Jan 3 · 17:00 可选</td><td><span class="b b-none">未预约</span></td><td><a href="https://www.arcticrestaurant.fi/">arcticrestaurant.fi</a></td></tr>
+      <tr><td>Gustav Kitchen &amp; Bar · Taiga 替代方案</td><td><span class="b b-none">未预约</span></td><td><a href="https://www.gustavkitchenbar.fi/en/home/">gustavkitchenbar.fi</a></td></tr>
+      <tr><td>Restaurant Gaissa · 市中心临时备选</td><td><span class="b b-none">未预约</span></td><td>Google Maps 搜索餐厅名称</td></tr>
+      <tr><td>Pure Burger Rovaniemi · 简餐备选</td><td><span class="b b-none">未预约</span></td><td>Google Maps 搜索餐厅名称 · 无需预约</td></tr>
+    </tbody></table></div>
+
+  <h3 class="tbl-title">🏙 赫尔辛基（Day 8）参考</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>活动</th><th>服务商</th><th>预订平台</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>现代桑拿</td><td>Löyly Helsinki</td><td><a href="https://loylyhelsinki.fi">loylyhelsinki.fi</a></td><td>提前 1-2 周官网预约</td></tr>
+      <tr><td>海滨桑拿 + 泳池</td><td>Allas Sea Pool</td><td><a href="https://allasseapool.fi">allasseapool.fi</a></td><td>市中心码头旁 · 可直接去</td></tr>
+      <tr><td>传统桑拿</td><td>Kaurilan Sauna</td><td>可直接去</td><td>最地道的芬兰体验</td></tr>
+      <tr><td>老市集大厅</td><td>Old Market Hall</td><td>可直接去</td><td>午餐 / 觅食好去处</td></tr>
+    </tbody></table></div>
+
+</section>
+
+</main>
+<footer>2027 芬兰极光之旅 · 行程规划手册 <span class="en">— Finland Aurora Adventure 2027</span></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels={}; tabs.forEach(function(t){panels[t.dataset.tab]=document.getElementById('p-'+t.dataset.tab)});
+  var days=[].slice.call(document.querySelectorAll('#dayList .day'));
+  var chips=[].slice.call(document.querySelectorAll('.dchip[data-day]'));
+  var list=document.getElementById('dayList');
+  var cur=1, all=false;
+  var where=['','罗瓦涅米 · Day 1 – 4','罗瓦涅米 · Day 1 – 4','罗瓦涅米 · Day 1 – 4','罗瓦涅米 · Day 1 – 4','萨里山 NLV · Day 5 – 7','萨里山 NLV · Day 5 – 7','萨里山 NLV → 赫尔辛基 · Day 7','赫尔辛基 · Day 8','赫尔辛基 → 新加坡 · Day 9'];
+  function showTab(name,push){
+    if(!panels[name]) name='overview';
+    tabs.forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.tab===name))});
+    Object.keys(panels).forEach(function(k){panels[k].classList.toggle('on',k===name)});
+    if(push!==false){try{history.replaceState(null,'','#'+(name==='days'?'d'+cur:name))}catch(e){}}
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  function showDay(n){
+    cur=Math.max(1,Math.min(9,n));
+    days.forEach(function(d,i){d.classList.toggle('on',i+1===cur)});
+    chips.forEach(function(c){c.setAttribute('aria-selected',String(+c.dataset.day===cur))});
+    document.getElementById('dayWhere').textContent=where[cur];
+    var sel=document.querySelector('.dchip[aria-selected="true"]'); if(sel&&sel.scrollIntoView) sel.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+    try{history.replaceState(null,'','#d'+cur)}catch(e){}
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){showTab(t.dataset.tab)})});
+  chips.forEach(function(c){c.addEventListener('click',function(){all=false;list.classList.remove('allmode');document.getElementById('allDays').setAttribute('aria-pressed','false');showDay(+c.dataset.day)})});
+  document.getElementById('prevDay').addEventListener('click',function(){showDay(cur-1)});
+  document.getElementById('nextDay').addEventListener('click',function(){showDay(cur+1)});
+  document.getElementById('allDays').addEventListener('click',function(){all=!all;list.classList.toggle('allmode',all);this.setAttribute('aria-pressed',String(all))});
+  [].slice.call(document.querySelectorAll('[data-go]')).forEach(function(b){b.addEventListener('click',function(){if(b.dataset.day) showDay(+b.dataset.day);showTab(b.dataset.go)})});
+  // theme
+  var btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('fa27-theme'); if(s==='light'||s==='dark') root.setAttribute('data-theme',s)}catch(e){}
+  function paint(){btn.textContent=root.getAttribute('data-theme')==='light'?'☀':'☾'}
+  btn.addEventListener('click',function(){var n=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',n);try{localStorage.setItem('fa27-theme',n)}catch(e){}paint()});
+  paint();
+  // hash routing
+  var h=(location.hash||'').replace('#','');
+  var m=/^d([1-9])$/.exec(h);
+  if(m){showDay(+m[1]);showTab('days',false)}else if(h&&panels[h]){showTab(h,false);showDay(1)}else{showDay(1)}
+})();
+</script>
+</body>
+</html>
